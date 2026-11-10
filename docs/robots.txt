@@ -1,4 +1,29 @@
+# CLI 'n' Amen co. welcomes search engines, AI assistants and the agents people send.
+# A short guide for AI agents: https://clinamenco.com/llms.txt
+
 User-agent: *
+Allow: /
+
+# AI search engines and assistants, named so the welcome is plain. Each of these
+# groups replaces the one above for that crawler, so each says Allow too.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Amzn-SearchBot
+User-agent: Amazonbot
+User-agent: meta-webindexer
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://clinamenco.com/sitemap.xml

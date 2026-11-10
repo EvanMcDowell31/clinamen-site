@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://clinamenco.com/</loc>
     <lastmod>2026-11-10</lastmod>
+    <image:image><image:loc>https://clinamenco.com/img/ai-for-your-business-one-chore-at-a-time.png</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/cheap-fast-good-venn-diagram-pick-three.webp</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/cli-n-amen-co-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/clinamen-swerve-diagram.webp</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/evan-mcdowell.jpg</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/small-business-website-on-a-phone.webp</image:loc></image:image>
   </url>
 </urlset>

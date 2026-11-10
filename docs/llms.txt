@@ -1,0 +1,39 @@
+# CLI ’n’ Amen co. (Clinamen)
+
+> Fixed-price AI automations, websites and software for owner-run small businesses across the US, from $195 with money back. Start with a free Quick Check.
+
+Automations, websites and software for owner-run businesses across the United States. A fixed price, a written scope, money back, and work that is live within days. AI agents do the first pass. The founder checks every result before you see it.
+
+- Book a free 30-minute Quick Check: https://calendly.com/clinamenco
+- Email: clinamenco@protonmail.com (replies within one business day)
+- Founder: Evan McDowell, Marietta, Georgia
+- Offers and prices:
+  - **Quick Check:** Free. 30 minutes, by video or in person, about your weekly chores. Within one business day you get a one-page written list of 3 chores AI could take over, each with a fixed price.
+  - **One Fix, or one website:** $195 · · founding price · · standard $390. One automation or assistant, set up in the tools you already use, or a one-page website on your domain. Working within 5 business days of access. A 30-minute handover, a one-page “how it works”, and 30 days of fixes.
+  - **Sprint:** $990 · · founding price · · standard $1,450. Up to 3 fixes in 2 weeks, or a small software build. Documented, with your team shown how to use it, and each chore timed before and after so you see the hours saved. Includes your first month of Care, worth $149.
+  - **Care:** $149 · · a month · · Plus $390 a month. We keep every fix and page working as your apps change, and send a monthly note of the hours saved. Plus adds one new small fix and a 30-minute check-in each month. First month free with any Sprint.
+- **Money back:** If a One Fix doesn’t do what its one-page written scope says within 30 days, you get your money back.
+- **Founding prices:** Founding prices hold until Sunday 31 January 2027 or our first 10 paying clients, whichever comes first. That is a real limit, and we keep it.
+- **Refer a business:** $100 off for both of you once a business you refer pays for its first job. Never tied to a review.
+
+## The page
+
+- [The whole page as Markdown](https://clinamenco.com/index.html.md): every section, with the prices, terms and answers to common questions
+- [The old rule](https://clinamenco.com/#three): Cheap, fast and good. The old rule said pick two.
+- [What we do](https://clinamenco.com/#whatdo): Three ways to take work off an owner’s plate
+- [The math on one chore](https://clinamenco.com/#math): Three hours a week is 150 hours a year.
+- [Pricing](https://clinamenco.com/#pricing): Four ways to work with us
+- [How it works](https://clinamenco.com/#how): Three steps, one person accountable
+- [The founder](https://clinamenco.com/#owner): The person checking your job is the founder.
+- [Who it’s for](https://clinamenco.com/#who): Owner-run businesses of 2 to 20 people
+- [The name](https://clinamenco.com/#name): Why Clinamen
+- [Your data](https://clinamenco.com/#data): How we handle your data
+- [Questions](https://clinamenco.com/#faq): What owners ask before they book
+- [Start with a free Quick Check.](https://clinamenco.com/#book)
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/in/evanmcdowell31): Evan McDowell on LinkedIn
+- [GitHub](https://github.com/EvanMcDowell31): Evan McDowell's code
+- [evanmcdowell31.github.io](https://evanmcdowell31.github.io/): Evan McDowell's own site
+- [Irie](https://irie-people.github.io/irie/): the founder's open-source platform that runs the agents

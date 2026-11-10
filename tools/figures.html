@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Figures for docs/img</title>
+<!--
+  The source of the page's two figures. tools/shoot.mjs draws each one, light and dark,
+  into docs/img as WebP, so search engines can index them as pictures (they don't index
+  inline SVG). Edit the drawing here, then run: node tools/shoot.mjs
+-->
+<link rel="stylesheet" href="../docs/style.css">
+<style>
+  body { margin: 0; padding: 24px; display: flex; gap: 24px; align-items: start; }
+  /* Drawn on a transparent ground, so the page's own colour shows through; shoot.mjs clears the body's. */
+  .src { margin: 0; }
+  .src svg { display: block; width: 100%; height: auto; }
+
+  /* The old rule: three circles, cheap, fast and good, split by a lightning-bolt crack. */
+  #venn { width: 400px; }
+  #venn .s-cheap { fill: var(--amber); fill-opacity: .18; stroke: var(--amber); stroke-width: 2; }
+  #venn .s-fast { fill: var(--accent); fill-opacity: .18; stroke: var(--accent); stroke-width: 2; }
+  #venn .s-good { fill: var(--ink); fill-opacity: .07; stroke: var(--ink); stroke-width: 2; }
+  #venn .crack-gap { fill: none; stroke: var(--paper); stroke-width: 10; stroke-linejoin: miter; stroke-linecap: round; }
+  #venn .crack { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: miter; stroke-linecap: round; }
+  #venn .vl { font: 700 16px var(--mono); fill: var(--ink); }
+  #venn .vdot { fill: var(--amber); stroke: var(--paper); stroke-width: 2; }
+
+  /* Fig. 1 in the name entry: a small lean, a different landing. */
+  #fig1 { width: 160px; }
+  #fig1 .rain line { stroke: var(--muted); stroke-opacity: .55; stroke-width: 1.2; stroke-dasharray: 3 4; }
+  #fig1 .ghost { stroke: var(--muted); stroke-opacity: .35; stroke-width: 1.2; stroke-dasharray: 1 4; }
+  #fig1 .bend { stroke: var(--ink); stroke-width: 1.8; }
+  #fig1 .arc { fill: none; stroke: var(--amber); stroke-width: 1.2; }
+  #fig1 .fdot, #fig1 .hit { fill: var(--amber); }
+  #fig1 .ticks line { stroke: var(--amber); stroke-width: 1.4; stroke-linecap: round; }
+  #fig1 .flabel { font: italic 13px var(--serif); fill: var(--amber); }
+</style>
+</head>
+<body>
+
+<figure class="src" id="venn">
+  <svg viewBox="0 0 400 380">
+    <circle class="s-cheap" cx="148" cy="140" r="108"/>
+    <circle class="s-fast" cx="252" cy="140" r="108"/>
+    <circle class="s-good" cx="200" cy="230" r="108"/>
+    <polyline class="crack-gap" points="214,10 192,92 230,144 186,206 226,264 198,308 240,372"/>
+    <polyline class="crack" points="214,10 192,92 230,144 186,206 226,264 198,308 240,372"/>
+    <text class="vl" x="96" y="98">cheap</text>
+    <text class="vl" x="304" y="98" text-anchor="end">fast</text>
+    <text class="vl" x="150" y="302" text-anchor="middle">good</text>
+    <circle class="vdot" cx="200" cy="170" r="7.5"/>
+  </svg>
+</figure>
+
+<figure class="src" id="fig1">
+  <svg viewBox="0 0 160 210">
+    <g class="rain">
+      <line x1="30" y1="10" x2="30" y2="186"/>
+      <line x1="55" y1="10" x2="55" y2="186"/>
+      <line x1="105" y1="10" x2="105" y2="186"/>
+      <line x1="130" y1="10" x2="130" y2="186"/>
+      <line x1="80" y1="10" x2="80" y2="52"/>
+    </g>
+    <line class="ghost" x1="80" y1="52" x2="80" y2="186"/>
+    <line class="bend" x1="80" y1="52" x2="105" y2="172"/>
+    <path class="arc" d="M80 78 A26 26 0 0 0 85.3 77.5"/>
+    <text class="flabel" x="87" y="74">α</text>
+    <circle class="fdot" cx="80" cy="52" r="3"/>
+    <g class="ticks">
+      <line x1="105" y1="172" x2="93" y2="184"/>
+      <line x1="105" y1="172" x2="117" y2="184"/>
+      <line x1="105" y1="172" x2="118" y2="166"/>
+      <line x1="105" y1="172" x2="99" y2="188"/>
+    </g>
+    <circle class="hit" cx="105" cy="172" r="4"/>
+  </svg>
+</figure>
+
+</body>
+</html>

@@ -23,17 +23,19 @@ More in `review/`: every section at phone and desktop width, dark mode, and both
 7. **The founder.** The photo, an at-a-glance card, and the proof: Irie, the agentic tooling and launches at a large retailer (not named on the page), the small-builder software at Ressio, and links to LinkedIn, GitHub, the personal site and Irie.
 8. **Who it’s for**, including markets and food trucks, the free nonprofit fixes, and regulated data scoped in writing.
 9. **Why Clinamen:** a dictionary entry, Fig. 1 (the small lean and the different landing), and how to say the name.
-10. **Your data**, and the closing booking band.
+10. **Your data.**
+11. **Questions:** fifteen that owners ask (cost, what AI can take on, timing, money back, data, where we work, Care, software, nonprofits, the name), each opening in place; then the closing booking band. The footer says where the firm is, who owns the pictures, how visits are counted, and where AI assistants should look.
 
-The look: Fraunces for headings, JetBrains Mono for the CLI half of the wordmark, labels and prices, the system sans for text. Teal for actions, amber for the swerving atom, and a darker amber for small labels so they stay readable. Light and dark follow the visitor’s setting, and the round switch beside Book in the header overrides it; the choice is kept in their browser. Both fonts are served from `docs/fonts/` under the SIL Open Font License, with the license files alongside, so the page loads nothing from other servers.
+The look: Fraunces for headings, JetBrains Mono for the CLI half of the wordmark, labels and prices, the system sans for text. Teal for actions, amber for the swerving atom, and a darker amber for small labels so they stay readable. Light and dark follow the visitor’s setting, and the round switch beside Book in the header overrides it; the choice is kept in their browser. Both fonts are served from `docs/fonts/` under the SIL Open Font License, with the license files alongside, so the page loads nothing from other servers; its one request out is GoatCounter’s visit count.
 
 ## Editing it
 
-- **Prices and terms:** the `pricing` section of `docs/index.html` (one `.price` block per offer, the three notes), the `.line-price` lines under “What we do”, the comparison table under “The old rule”, the calculator’s two prices in `docs/site.js`, and the JSON-LD block in `<head>`.
+- **Prices and terms:** the `pricing` section of `docs/index.html` (one `.price` block per offer, the three notes), the `.line-price` lines under “What we do”, the comparison table under “The old rule”, the FAQ answers (`#faq`), the meta description in `<head>` (“from $195”), the calculator’s two prices in `docs/site.js`, and the offers in the JSON-LD block in `<head>`. Then run `node tools/shoot.mjs --text`: it fails, and says where, if the JSON-LD, the descriptions, the FAQ or `site.js` name a price the page doesn’t show.
 - **Colours:** the tokens at the top of `docs/style.css`. The dark set is written twice, once for the system setting and once for the header switch: change both.
 - **Email and booking link:** search `docs/index.html` for `protonmail` and `calendly`.
-- **The photo:** `docs/evan.jpg`, a 520-pixel square JPEG.
-- **Screenshots, the share card (`docs/og.png`), the icon and the “this site on a phone” proof (`docs/proof-phone.png`, copied from `review/home-phone.png`):** `node tools/shoot.mjs` (Node 22 or newer). It drives Playwright’s cached headless Chromium shell over the DevTools protocol (`tools/cdp.mjs`); nothing is installed and no window is shown. `?still` on the page stops the animation, `?og` draws the share card, `?icon` the icon.
+- **The photo:** `docs/img/evan-mcdowell.jpg`, a 520-pixel square JPEG.
+- **The date:** when the content changes, change the footer’s `<time datetime>` and the JSON-LD’s `dateModified` together (the check compares them); the sitemap’s `lastmod` follows the footer.
+- **Pictures, screenshots and the files for agents:** `node tools/shoot.mjs` (Node 22 or newer, about 3 minutes). In order, it draws the Venn diagram and Fig. 1 from `tools/figures.html` into `docs/img` as WebP, light and dark (edit the drawings there); the icons, `docs/favicon.ico` and the logo `docs/img/cli-n-amen-co-logo.png`; the review screenshots, the share card (`docs/img/ai-for-your-business-one-chore-at-a-time.png`), the app icon and the phone proof (`docs/img/small-business-website-on-a-phone.webp`); then the files for search engines and AI agents, with their checks (`tools/agent.mjs`, below). `node tools/shoot.mjs --text` does only that last step, in seconds. It drives Playwright’s cached headless Chromium shell over the DevTools protocol (`tools/cdp.mjs`); nothing is installed and no window is shown. `?still` on the page stops the animation, `?og` draws the share card, `?icon` the icon.
 - **Before publishing:** `node tools/a11y.mjs`, the accessibility check below. It prints what fails and exits 1.
 
 ## Accessibility
@@ -47,6 +49,17 @@ What the page does for it, so a change keeps it:
 - **Motion.** The hero window’s pause button stops the animation and the choice is kept for the next visit; under “reduce motion” nothing moves and the button hides.
 - **Screen readers.** The calculator’s result is a status message, updated once typing pauses. `.sr-only` text completes the header’s “Book” link on phones, says “Not … but” around the struck “pick two”, names the pause button, and respells the IPA. Lists styled without bullets carry `role="list"`, which Safari needs to keep them lists. The price table has column and row headers. The Latin words carry `lang="la"`.
 - **Still to check by hand** after a big change: VoiceOver on an iPhone and on a Mac (rotor headings, the calculator’s announcement, the pause button), and 200% zoom.
+
+## Search and AI agents
+
+What the page does so that search engines and AI assistants find it, understand it and can act on it:
+
+- **For Google.** A title and description written for the search “AI automation for small business”; `max-image-preview:large`, so results may show large pictures; and one JSON-LD graph in `<head>`: the site’s name (`WebSite`, which Google shows above results from the domain’s home page), the firm (`ProfessionalService`, with its logo, Marietta, Georgia, the United States as its area, contact and booking), the founder (`Person`, with his profiles), Irie, the three services, and every offer with its founding and standard price (`priceValidUntil` 2027-01-31). The FAQ is `FAQPage` microdata on the questions themselves, so its markup can’t drift from them. All of it passes https://validator.schema.org/ with no errors or warnings.
+- **For Google Images.** The Venn diagram and Fig. 1 are pictures (search engines don’t index inline SVG), drawn from `tools/figures.html`, with file names that say what they show, alt text, captions, and dark versions through `<picture>`. Every picture is in `docs/sitemap.xml`, which is an image sitemap. The JSON-LD gives the firm’s own pictures a creator, a credit, a copyright notice and a license page (`#pictures` in the footer: write to us), which makes them eligible for Google Images’ “Licensable” badge. The logo (512 px) and `favicon.ico` (16, 32 and 48 px) are what Google shows beside the site in results.
+- **For AI assistants.** `docs/robots.txt` names the AI search crawlers and assistants (OpenAI, Anthropic, Perplexity, Google, Apple, Amazon, Meta, DuckDuckGo, Mistral and Common Crawl) and lets them all in. `docs/llms.txt` is a short guide with the offers, prices and terms; `docs/index.html.md`, linked from the page as `rel="alternate"`, and `docs/llms-full.txt` are the whole page as Markdown. `tools/agent.mjs` writes all three, and the sitemap, from the page itself, so they always agree with it.
+- **For agents in the browser.** `docs/site.js` offers three read-only tools through WebMCP (`document.modelContext`), the standard Chrome is trialling: `list_services_and_prices`, `answer_question` (from the FAQ) and `get_booking_link`. The calculator form is a tool too, `estimate_time_and_money_saved`, by its `toolname` attributes. Where WebMCP is missing they do nothing; real visitors’ Chrome gets them once the page carries an origin-trial token (see the checklist). `tools/agent.mjs` calls each one against a stand-in for the API.
+- **Visits.** GoatCounter counts them, without cookies or personal data, at https://clinamenco.goatcounter.com once that account exists. Its Campaigns and Referrers lists show `utm_source` and `utm_campaign` from links in social posts. `docs/count.js` is its script (ISC license), served from the site.
+- **Bing and the others.** `sh tools/indexnow.sh` tells the IndexNow search engines (Bing, Yandex, Seznam, Naver and Yep) that the page changed; Bing’s index also feeds ChatGPT search and Copilot. The key is the 32-character `.txt` file in `docs/`. Google doesn’t take IndexNow: it reads the sitemap.
 
 ## Go-live checklist
 
@@ -65,13 +78,18 @@ What the page does for it, so a change keeps it:
    | CNAME | www | evanmcdowell31.github.io |
 
 2. **The custom domain on GitHub Pages.** Add `docs/CNAME` holding `clinamenco.com`, set the domain in the repository’s Pages settings, wait for the certificate, then turn on “Enforce HTTPS”. `www.clinamenco.com` then redirects to the apex.
-3. **Prices.** The page shows the plan’s proposed prices and the founding-price limit (31 January 2027 or the first 10 paying clients). Note that Sprint ($1,450; $990 founding) costs more than three One Fixes ($1,170; $585 founding); the page explains the extras (documentation, training, before-and-after timing). Confirm or change before marketing starts.
-4. **Data page.** Three practices are not yet specific on purpose: where job files are stored, what the AI provider keeps, and how many days after handover copies are deleted. Add them once settled.
-5. **Canopy.** The page says it is in development and invites markets and vendors to write in. Update the line when a pilot runs.
-6. **A postal address** is needed for marketing email (CAN-SPAM), not for the page.
-7. **A phone number**, if you want calls: many owners call before they book. It goes in the footer and the closing band.
-8. **Email at the domain**, such as hello@clinamenco.com, if wanted: Proton Mail’s custom-domain feature, or Porkbun’s free email forwarding.
-9. **A Google Business Profile**, if clients are met in person.
+3. **Search engines.** Once clinamenco.com serves the site: in Google Search Console, add a Domain property for clinamenco.com, verified by the TXT record it gives (at Porkbun, alongside the records above), and submit `https://clinamenco.com/sitemap.xml`. Bing Webmaster Tools can import the property from Search Console. Then run `sh tools/indexnow.sh`, and again after each change.
+4. **GoatCounter.** Sign up at https://www.goatcounter.com/signup with the code `clinamenco` (free for a small business; no cookies). The page already sends its counts there.
+5. **Prices.** The page shows the plan’s proposed prices and the founding-price limit (31 January 2027 or the first 10 paying clients). Note that Sprint ($1,450; $990 founding) costs more than three One Fixes ($1,170; $585 founding); the page explains the extras (documentation, training, before-and-after timing). Confirm or change before marketing starts.
+6. **Data page.** Three practices are not yet specific on purpose: where job files are stored, what the AI provider keeps, and how many days after handover copies are deleted. Add them once settled.
+7. **Canopy.** The page says it is in development and invites markets and vendors to write in. Update the line when a pilot runs.
+8. **A postal address** is needed for marketing email (CAN-SPAM), not for the page.
+9. **A phone number**, if you want calls: many owners call before they book. It goes in the footer and the closing band.
+10. **Email at the domain**, such as hello@clinamenco.com, if wanted: Proton Mail’s custom-domain feature, or Porkbun’s free email forwarding.
+11. **A Google Business Profile**, if clients are met in person: for searches such as “AI consultant near me”, it counts more than anything on the page. A service-area business can hide its street address.
+12. **Social profiles.** Once the firm’s LinkedIn, Instagram, Threads, X and TikTok profiles exist, add each URL to the firm’s `sameAs` list in the JSON-LD, and `<meta name="twitter:site" content="@…">` for X.
+13. **Optional: WebMCP for every Chrome visitor.** Register clinamenco.com for Chrome’s WebMCP origin trial at https://developer.chrome.com/origintrials/ and put the token in `<head>` as `<meta http-equiv="origin-trial" content="…">`.
+14. **Optional: reuse of the figures.** They are all rights reserved, and the footer asks people to write. Putting the Venn diagram and Fig. 1 under CC BY 4.0 would let anyone reuse them with a credit and a link back.
 
 ## Sources
 
@@ -81,6 +99,12 @@ What the page does for it, so a change keeps it:
 - Fraunces, by Undercase Type, and JetBrains Mono, by JetBrains, both under the SIL Open Font License 1.1 (`docs/fonts/*/OFL.txt`), fetched from Google Fonts.
 - The offers, prices and wording follow the firm’s 90-day marketing plan (private).
 - The published prices in “What this costs elsewhere”, as the plan found them on 9 November 2026: an AI automation agency’s pilot and plans, https://samautomates.vercel.app/pricing; US AI consultants’ hourly rates and advisory retainers, https://www.leanware.co/insights/how-much-does-an-ai-consultant-cost; a first AI project for a firm under 10 people, https://www.lilachbullock.com/ai-consultant-cost-small-business/. Website builders: Squarespace’s plans, $19 to $99 a month billed annually, read on 10 November 2026 at https://www.squarespace.com/pricing. Check them again before quoting them anywhere else.
+- Google Search Central, on images (`<img>` rather than CSS or inline SVG, alt text, file names, image sitemaps, preferred images), https://developers.google.com/search/docs/appearance/google-images; image license metadata and the Licensable badge, https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata; site names, https://developers.google.com/search/docs/appearance/site-names. Read on 10 November 2026.
+- The llms.txt proposal, its format and the `.md` twin of a page: https://llmstxt.org/
+- WebMCP: Chrome for Developers, https://developer.chrome.com/docs/ai/webmcp, its imperative API, https://developer.chrome.com/docs/ai/webmcp/imperative-api, declarative API, https://developer.chrome.com/docs/ai/webmcp/declarative-api, and best practices, https://developer.chrome.com/docs/ai/webmcp/best-practices; the W3C Web Machine Learning Community Group’s explainer, https://github.com/webmachinelearning/webmcp. The origin trial runs to Chrome 162.
+- AI crawlers’ names, from their makers’ pages as gathered in https://depra.ai/ai-crawlers (OpenAI, https://platform.openai.com/docs/bots; Perplexity, https://docs.perplexity.ai/guides/bots; Mistral, https://docs.mistral.ai/robots/), November 2026.
+- GoatCounter: its terms (free for small and medium businesses), https://goatcounter.com/terms, and campaigns (`utm_campaign`, `utm_source`), https://www.goatcounter.com/help/campaigns. `docs/count.js` is https://github.com/arp242/goatcounter/blob/master/public/count.js, under the ISC license.
+- IndexNow, the shared protocol and its endpoint: https://www.indexnow.org/
 - W3C, Web Content Accessibility Guidelines (WCAG) 2.2, the standard the page aims at: https://www.w3.org/TR/WCAG22/
 - axe-core 4.10.2 by Deque Systems, under the Mozilla Public License 2.0: https://github.com/dequelabs/axe-core. `tools/a11y.mjs` fetches it at run time; it is not kept in this repository.
 - Scott O’Hara, “‘Fixing’ Lists”, on why lists styled without bullets carry `role="list"`: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html

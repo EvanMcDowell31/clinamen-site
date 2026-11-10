@@ -114,7 +114,7 @@ code { font-family: var(--mono); }
 }
 .bar { display: flex; align-items: center; gap: 24px; min-height: 64px; }
 .nav { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
-.nav a { color: var(--muted); text-decoration: none; }
+.nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
 .nav a:hover { color: var(--ink); }
 .theme-toggle { display: inline-grid; place-items: center; flex: none; width: 40px; height: 40px; padding: 0; border: 1px solid var(--edge); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; transition: background .15s, border-color .15s; }
 .theme-toggle:hover { background: var(--card); border-color: var(--muted); }
@@ -239,14 +239,8 @@ section + section { border-top: 1px solid var(--line); }
 .three-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 64px); align-items: center; margin-bottom: 40px; }
 .three-copy .intro { margin-bottom: 0; }
 .venn { margin: 0; justify-self: center; width: 100%; max-width: 420px; text-align: center; }
-.venn svg { display: block; width: 100%; height: auto; overflow: visible; }
-.venn .s-cheap { fill: var(--amber); fill-opacity: .18; stroke: var(--amber); stroke-width: 2; }
-.venn .s-fast { fill: var(--accent); fill-opacity: .18; stroke: var(--accent); stroke-width: 2; }
-.venn .s-good { fill: var(--ink); fill-opacity: .07; stroke: var(--ink); stroke-width: 2; }
-.venn .crack-gap { fill: none; stroke: var(--paper); stroke-width: 10; stroke-linejoin: miter; stroke-linecap: round; }
-.venn .crack { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: miter; stroke-linecap: round; }
-.venn .vl { font: 700 16px var(--mono); fill: var(--ink); }
-.venn .vdot { fill: var(--amber); stroke: var(--paper); stroke-width: 2; }
+/* The Venn diagram and Fig. 1 are pictures drawn from tools/figures.html (node tools/shoot.mjs), so search engines index them. */
+.venn img, .fig img { display: block; width: 100%; height: auto; }
 .venn figcaption { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-top: 10px; }
 .venn figcaption s { text-decoration-color: var(--amber); text-decoration-thickness: 1.5px; margin-right: 8px; }
 .compare { margin-top: 36px; }
@@ -365,20 +359,24 @@ section + section { border-top: 1px solid var(--line); }
 .sayit .label { font-family: var(--mono); font-size: 12.5px; color: var(--amber-text); text-transform: uppercase; letter-spacing: .08em; margin-right: 10px; }
 .sayit .brand-inline { color: var(--ink); font-size: 20px; margin-right: 8px; }
 .fig { float: right; width: 170px; margin: 0 0 12px 24px; text-align: center; }
-.fig svg { display: block; width: 100%; height: auto; }
-.fig .rain line { stroke: var(--muted); stroke-opacity: .55; stroke-width: 1.2; stroke-dasharray: 3 4; }
-.fig .ghost { stroke: var(--muted); stroke-opacity: .35; stroke-width: 1.2; stroke-dasharray: 1 4; }
-.fig .bend { stroke: var(--ink); stroke-width: 1.8; }
-.fig .arc { fill: none; stroke: var(--amber); stroke-width: 1.2; }
-.fig .fdot, .fig .hit { fill: var(--amber); }
-.fig .ticks line { stroke: var(--amber); stroke-width: 1.4; stroke-linecap: round; }
-.fig .flabel { font: italic 13px var(--serif); fill: var(--amber); }
 .fig figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 6px; line-height: 1.3; }
 
 /* Your data */
 .data-list { max-width: 48em; margin: 0; display: grid; gap: 8px 32px; grid-template-columns: 1fr; }
 .data-list dt { font-family: var(--serif); font-weight: 600; font-size: 20px; margin-top: 10px; }
 .data-list dd { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
+
+/* Questions: one line each, opened in place */
+.faq-list { max-width: 50em; border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 18px 0; cursor: pointer; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; flex: none; font: 700 20px/1 var(--mono); color: var(--amber-text); }
+.faq-list details[open] summary::after { content: "\2212"; }
+.faq-list summary:hover h3 { color: var(--accent); }
+.faq-list summary h3 { font-size: clamp(18px, 1.7vw, 21px); }
+.faq-list .a { padding: 0 44px 20px 0; color: var(--muted); font-size: 16.5px; max-width: 44em; }
+.faq-list .a p { margin: 0; }
 
 /* The closing band */
 .band { background: var(--accent); color: var(--on-accent); border-top: 0 !important; }
@@ -415,6 +413,16 @@ body.icon .iconcard svg { display: block; width: 180px; height: 180px; }
 body.og, body.icon { background: var(--term); }
 
 /* Phones and small screens */
+@media (max-width: 1060px) {
+  .nav { gap: 14px; font-size: 14px; }
+}
+/* Six section links, the theme switch and Book fit on one line from 1011 px. */
+@media (max-width: 1010px) {
+  .nav { display: none; }
+  .btn.small { margin-left: auto; }
+  .theme-toggle { margin-left: auto; }
+  .theme-toggle:not([hidden]) + .btn.small { margin-left: 0; }
+}
 @media (max-width: 1000px) {
   .offer-cards { grid-template-columns: repeat(2, 1fr); }
 }
@@ -453,6 +461,7 @@ body.og, body.icon { background: var(--term); }
   .notes .has-stamp { padding-right: 24px; padding-bottom: 104px; }
   .stamp { top: auto; bottom: 10px; transform: rotate(-12deg); }
   .fig { float: none; width: 130px; margin: 0 auto 16px; }
+  .faq-list .a { padding-right: 0; }
   .glance { grid-template-columns: 1fr; gap: 2px 0; }
   .glance dd { margin-bottom: 8px; }
 }
