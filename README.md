@@ -2,8 +2,8 @@
 
 The website of Clinamen, marketed as **CLI ’n’ Amen co.**: automations, websites and software for owner-run small businesses across the United States. One static page, no build step.
 
-- Address: https://clinamenco.com (once the DNS below points here)
-- Preview: https://evanmcdowell31.github.io/clinamen-site/
+- Address: https://clinamenco.com/ (live since 10 November 2026, HTTPS enforced)
+- The old preview address, https://evanmcdowell31.github.io/clinamen-site/, redirects there.
 - The page lives in `docs/`; GitHub Pages serves it from `docs/` on `main`.
 
 | Phone | Desktop |
@@ -74,7 +74,7 @@ What the page does so that search engines and AI assistants find it, understand 
 
 ## Go-live checklist
 
-1. **DNS at Porkbun.** Delete the parking records (the ALIAS on `@` and the CNAME on `www`) and add:
+1. **DNS at Porkbun: done on 10 November 2026.** The parking records (an ALIAS on `@` and a wildcard CNAME `*`, both to `uixie.porkbun.com`) are gone. The MX, SPF and `_acme-challenge` records for Porkbun’s email forwarding stay. These records point the domain at GitHub Pages:
 
    | Type | Host | Answer |
    | --- | --- | --- |
@@ -88,7 +88,7 @@ What the page does so that search engines and AI assistants find it, understand 
    | AAAA | @ | 2606:50c0:8003::153 |
    | CNAME | www | evanmcdowell31.github.io |
 
-2. **The custom domain on GitHub Pages.** Add `docs/CNAME` holding `clinamenco.com`, set the domain in the repository’s Pages settings, wait for the certificate, then turn on “Enforce HTTPS”. `www.clinamenco.com` then redirects to the apex.
+2. **The custom domain on GitHub Pages: done on 10 November 2026.** `docs/CNAME` holds `clinamenco.com`; never delete it. The certificate covers clinamenco.com and www.clinamenco.com and GitHub renews it. HTTPS is enforced, and http, www and the github.io address all redirect to https://clinamenco.com/. Still worth doing: verify the domain in the owner’s GitHub settings (Pages, Add a domain, then the TXT record it gives) so no other account can claim it.
 3. **Search engines.** Once clinamenco.com serves the site: in Google Search Console, add a Domain property for clinamenco.com, verified by the TXT record it gives (at Porkbun, alongside the records above), and submit `https://clinamenco.com/sitemap.xml`. Bing Webmaster Tools can import the property from Search Console. Then run `sh tools/indexnow.sh`, and again after each change.
 4. **GoatCounter.** Sign up at https://www.goatcounter.com/signup with the code `clinamenco` (free for a small business; no cookies). The page already sends its counts there.
 5. **Prices.** The page shows the plan’s proposed prices and the founding-price limit (31 January 2027 or the first 10 paying clients). Note that Sprint ($1,450; $990 founding) costs more than three One Fixes ($1,170; $585 founding); the page explains the extras (documentation, training, before-and-after timing). Confirm or change before marketing starts.
@@ -96,7 +96,7 @@ What the page does so that search engines and AI assistants find it, understand 
 7. **Canopy.** The page says it is in development and invites markets and vendors to write in. Update the line when a pilot runs.
 8. **A postal address** is needed for marketing email (CAN-SPAM), not for the page.
 9. **A phone number**, if you want calls: many owners call before they book. It goes in the footer and the closing band.
-10. **Email at the domain**, such as hello@clinamenco.com, if wanted: Proton Mail’s custom-domain feature, or Porkbun’s free email forwarding.
+10. **Email at the domain**, such as hello@clinamenco.com, if wanted: Proton Mail’s custom-domain feature, or Porkbun’s free email forwarding. The forwarding MX and SPF records are already in place, so a forward only needs adding, in Porkbun’s Email settings for the domain or by API with a key that has the `email` scope.
 11. **A Google Business Profile**, if clients are met in person: for searches such as “AI consultant near me”, it counts more than anything on the page. A service-area business can hide its street address.
 12. **Social profiles.** Once the firm’s LinkedIn, Instagram, Threads, X and TikTok profiles exist, add each URL to the firm’s `sameAs` list in the JSON-LD, and `<meta name="twitter:site" content="@…">` for X.
 13. **Optional: WebMCP for every Chrome visitor.** Register clinamenco.com for Chrome’s WebMCP origin trial at https://developer.chrome.com/origintrials/ and put the token in `<head>` as `<meta http-equiv="origin-trial" content="…">`.
