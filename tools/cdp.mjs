@@ -9,6 +9,15 @@ import { fileURLToPath } from "node:url";
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 export const pageUrl = "file://" + join(root, "docs/index.html");
+// Every page of the site, for the checks, the screenshots and the files for AI agents. A new page goes
+// here: its file under docs/ and the path it is served at.
+export const pages = [
+  { name: "home", file: "docs/index.html", path: "", url: pageUrl },
+  ...["irie", "canopy", "social"].map((slug) => ({
+    name: slug, file: `docs/products/${slug}/index.html`, path: `products/${slug}/`,
+    url: "file://" + join(root, "docs/products", slug, "index.html"),
+  })),
+];
 
 function findShell() {
   if (process.env.HEADLESS_SHELL) return process.env.HEADLESS_SHELL;

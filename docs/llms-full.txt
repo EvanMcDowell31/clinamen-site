@@ -11,6 +11,10 @@
 
 Automations, websites and software for owner-run businesses across the United States. A fixed price, a written scope, money back, and work that is live within days.
 
+[Book a free Quick Check](https://calendly.com/clinamenco)
+
+[See pricing](https://clinamenco.com/#pricing)
+
 AI agents do the first pass. The founder checks every result before you see it.
 
 ## The old rule: Cheap, fast and good. The old rule said pick two.
@@ -58,7 +62,7 @@ Owner-run businesses lose hours every week to the same few chores. We hand one o
 
 One page, built for phones first: your name, services, prices, hours and a booking button, written to be found in local search. Live on your own domain within 5 business days. You own the domain and every file. There is no monthly fee: the only running cost is your domain, about $10 to $20 a year.
 
-This site is one. So is [briandominguezvoice.com](https://briandominguezvoice.com/), an audiobook narrator’s site.
+This site is one. So is [briandominguezvoice.com](https://briandominguezvoice.com/), an audiobook narrator’s site, and two demos for local shops are just below.
 
 **$195** founding price · standard $390 · changes and new pages under Care
 
@@ -66,9 +70,17 @@ This site is one. So is [briandominguezvoice.com](https://briandominguezvoice.co
 
 *This site, on a phone*
 
+### Sites we’ve made
+
+- **Brian Dominguez, audiobook narrator.** Live Every audiobook he has narrated, a page per title with a sample and store links, and a page for authors who want to hire him. [Visit Brian’s site](https://briandominguezvoice.com/)
+- **Bolivar Coffee, a café redesign.** Demo A redesign concept for a Colombian café with shops in Smyrna and Marietta, Georgia: the menu, both cafés’ hours and pickup orders, on one page. [See the café demo](https://evanmcdowell31.github.io/bolivar-site/)
+- **Elevate Smoke, Vape & CBD.** Demo A concept for a smoke and vape shop in Marietta, Georgia: what’s in the case, the week’s specials, directions, and an age check at the door. [See the smoke shop demo](https://evanmcdowell31.github.io/elevate-site/)
+
+We make demos on spec, without the business taking part, to show what we would build. Their names and marks belong to them.
+
 ### Software: Software for the way you take money
 
-**Canopy** is our checkout for market stalls and food trucks, in development: one screen on the vendor’s phone for every way a customer pays (card tap, phone wallets, Cash App, Venmo, PayPal, Zelle, SNAP and market tokens, and cash). Card and wallet payments land in the vendor’s own Square account, and Canopy never holds the money. Zelle, Venmo, tokens and cash go in the same ledger, so the day adds up in one place, and there is nothing for the customer to install. We are starting with farmers markets: markets and vendors who want to try it early, [write to us](mailto:clinamenco@protonmail.com).
+**Canopy** is our checkout for market stalls and food trucks, in development: one screen on the vendor’s phone for every way a customer pays (card tap, phone wallets, Cash App, Venmo, PayPal, Zelle, SNAP and market tokens, and cash). Card and wallet payments land in the vendor’s own Square account, and Canopy never holds the money. Zelle, Venmo, tokens and cash go in the same ledger, so the day adds up in one place, and there is nothing for the customer to install. We are starting with farmers markets: markets and vendors who want to try it early, [write to us](mailto:clinamenco@protonmail.com). [See how Canopy works](https://clinamenco.com/products/canopy/).
 
 **Custom software.** When a chore needs more than an automation, we build the tool: a small server, a web app your team installs on their phones, an iPhone app. Payments go through your own Square or Stripe account, so you keep your money and your processor.
 
@@ -133,9 +145,17 @@ $100 off for both of you once a business you refer pays for its first job. Never
 
 1. **You book a Quick Check.** 30 minutes on your weekly chores. Within one business day, a one-page written list: 3 chores, each with a fixed price.
 2. **We build it.** In the tools you already use, working within 5 business days of access, with a handover and a one-page “how it works”.
-3. **The founder checks everything.** AI agents, run by [Irie](https://github.com/irie-people/irie), the founder’s own open-source platform, on Anthropic’s Claude, do the first pass. He checks every result before it reaches you. Then 30 days of fixes.
+3. **The founder checks everything.** AI agents, run by [Irie](https://clinamenco.com/products/irie/), the founder’s own open-source platform, on Anthropic’s Claude, do the first pass. He checks every result before it reaches you. Then 30 days of fixes.
 
 The claims we make are the ones we can keep: a fixed price, a written scope, a deadline, and money back. No invented reviews or results. No claims we can’t back. No pressure.
+
+## Products: We build our own software, too
+
+With the same agents and the same checks as your job. One is out and free; two are on the way.
+
+- **Irie.** Open source · version 1.0 The app our agents run in: every AI coding agent you have, side by side in one calm view. Free, for Mac and Linux. [More about Irie](https://clinamenco.com/products/irie/)
+- **Canopy.** In development One checkout on a vendor’s phone for every way a customer pays, and one ledger at closing. For market stalls and food trucks. [More about Canopy](https://clinamenco.com/products/canopy/)
+- **A social media tool.** In early development Plan, draft and post to every channel from one place, and nothing goes out until you say yes. [More about the social media tool](https://clinamenco.com/products/social/)
 
 ## The founder: The person checking your job is the founder.
 
@@ -268,12 +288,301 @@ Clinamen is Lucretius’ word for the swerve: atoms fall straight down until one
 
 Thirty minutes, no obligation, and a written answer within one business day.
 
+[Book a free Quick Check](https://calendly.com/clinamenco)
+
+[or write to clinamenco@protonmail.com](mailto:clinamenco@protonmail.com)
+
 ---
 
 Clinamen · Marietta, Georgia, working with small businesses across the United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
-The figures and pictures on this page, except the founder’s photo, are © 2026 Clinamen: to use one, [write to us](mailto:clinamenco@protonmail.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
+Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
+
+The figures and pictures on this page, except the founder’s photo and the pictures of the sites under Websites, are © 2026 Clinamen: to use one, [write to us](mailto:clinamenco@protonmail.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
 
 For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 10 November 2026.
 
 Built with [Irie](https://irie-people.github.io/irie/), the founder’s open-source agent platform. © 2026 Clinamen.
+
+---
+
+# Irie: every AI coding agent, side by side
+
+> Irie is the free, open-source app our AI agents run in: coding agents from any supplier, on any model, side by side in one calm view, each in its own git worktree. Version 1.0 for Mac and Linux.
+
+- Page: https://clinamenco.com/products/irie/
+- Book a free Quick Check: https://calendly.com/clinamenco
+- Email: clinamenco@protonmail.com
+- Updated: 2026-11-10
+
+Open source · free · version 1.0
+
+## Irie
+
+Every AI coding agent you have, side by side, in one calm view.
+
+Irie runs coding agents from any supplier, on any model, in the cloud or on your own machine. Each one works on its own task in its own copy of your code, and one window shows what every agent is doing and which one needs you. It is what our own agents run in.
+
+[Install Irie](https://irie-people.github.io/irie/install.html)
+
+[See the code on GitHub](https://github.com/irie-people/irie)
+
+Free under the Apache-2.0 license. For Mac and Linux. No account, no server, no telemetry.
+
+![Irie’s Mac app. A sidebar lists three agents by project: two working, and one marked red because it asks which color the signup button should be. Its terminal fills the right side, showing the question.](https://clinamenco.com/img/irie-ai-coding-agents-mac-app.webp)
+
+*Irie’s Mac app, filmed with stand-in agents that run no model*
+
+## Who it’s for: Anyone who works with AI coding agents
+
+Whether you run one agent or a dozen, on Claude or on a model on your own laptop.
+
+- **Developers** · Hand the grind to agents working in parallel, and spend your hours on the parts only you can do.
+- **Teams at work** · It runs on each person’s own machine with the AI provider you already use. Nothing goes to a server of ours: there isn’t one.
+- **Small firms like ours** · Several jobs moving at once, each in its own lane, with a person checking every result.
+
+## How it works: Type a task, watch the cards, answer when asked
+
+1. **Type a task.** Say what you want done. Irie starts an agent on it in its own git worktree, so agents never trip over each other’s changes.
+2. **Watch the cards.** Every agent gets a card: working, done, or red when it has a question. Answer it, and the agent goes back to work.
+3. **Use the right model.** A fast local model for the small jobs, a strong cloud model for the hard ones, and a second opinion from another supplier before anything reaches you.
+4. **Come back to it.** Close the window and the agents keep working. Every session’s context is kept in git, so any of it can be picked up again.
+
+## Why people use it: More done, less spent, nothing hidden
+
+- **Take back your time.** Agents work side by side, each on its own task. You review, decide, and do the parts only you can do.
+- **Any agent, any supplier.** Claude Code, or any other agent that runs in a terminal. If a supplier raises prices or goes away, swap it out.
+- **Less spent per task.** Each task goes to the cheapest model accurate enough for it, and a model on your own machine costs nothing per token.
+- **Nothing sent on its own.** No server, no account, no telemetry. Your agents talk to their own providers, as they would without Irie, and its records stay in folders only you can open.
+- **One calm view.** A sidebar of cards in place of a wall of terminals. Red means an agent needs you; everything else can wait.
+- **Free, and yours to change.** Open source under Apache-2.0 and built from public documentation. Read every line, and change what you like.
+
+## Get started: One line to install
+
+Paste it into a terminal on a Mac or Linux. It downloads the latest release, checks it, and installs `irie`, and Irie.app on a Mac. Then `irie setup` checks what else Irie needs and asks before it installs anything.
+
+[Install guide](https://irie-people.github.io/irie/install.html) · · [Your first session](https://irie-people.github.io/irie/first-session.html) · · [What Irie is, part by part](https://irie-people.github.io/irie/what-irie-is.html) · · [Roadmap](https://irie-people.github.io/irie/roadmap.html)
+
+```
+curl -fsSL https://irie-people.github.io/irie/install.sh | sh
+```
+
+## Where it stands: Version 1.0, and our daily driver
+
+### Out now
+
+Version 1.0, released on 9 November 2026: the `irie` program for Mac and Linux, and Irie.app for Mac.
+
+### How we use it
+
+Every job at CLI ’n’ Amen co. runs in Irie. Agents do the first pass, and the founder checks every result before you see it.
+
+### Not a developer?
+
+Irie is why our work takes days, not weeks. [Book a free Quick Check](https://calendly.com/clinamenco) and we’ll put it to work on a chore of yours.
+
+## More from CLI ’n’ Amen co.
+
+- **Canopy.** In development One checkout on a vendor’s phone for every way a customer pays, and one ledger at closing. For market stalls and food trucks. [More about Canopy](https://clinamenco.com/products/canopy/)
+- **A social media tool.** In early development Plan, draft and post to every channel from one place, and nothing goes out until you say yes. [More about the social media tool](https://clinamenco.com/products/social/)
+
+## Run your first agents today.
+
+Irie is free. Install it in one line, or read what it is, part by part, first.
+
+[Install Irie](https://irie-people.github.io/irie/install.html)
+
+[or read what Irie is](https://irie-people.github.io/irie/what-irie-is.html)
+
+---
+
+Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
+
+Clinamen · United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+
+For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/irie/index.html.md). Updated 10 November 2026.
+
+The screenshot of Irie is from the Irie project, under Apache-2.0. © 2026 Clinamen.
+
+---
+
+# Canopy: one checkout for every way a customer pays
+
+> Canopy, in development, puts every way a customer pays on one screen on a market vendor’s or food truck’s phone: card taps, Apple Pay, Cash App, Venmo, Zelle, SNAP tokens and cash, with one ledger at closing. Cards land in your own Square account.
+
+- Page: https://clinamenco.com/products/canopy/
+- Book a free Quick Check: https://calendly.com/clinamenco
+- Email: clinamenco@protonmail.com
+- Updated: 2026-11-10
+
+In development · farmers markets first
+
+## Canopy
+
+One checkout for every way a customer pays.
+
+For market stalls and food trucks. Card taps, Apple Pay and Google Pay, Cash App, Venmo, Zelle, SNAP and market tokens, and cash, all on one screen on your phone. At closing, the whole day adds up in one ledger.
+
+[Try it early](mailto:clinamenco@protonmail.com?subject=Trying%20Canopy%20early)
+
+[See how it works](https://clinamenco.com/products/canopy/#how)
+
+Card and wallet payments land in your own Square account. Canopy never holds your money.
+
+## Who it’s for: Made for selling outdoors
+
+Where a sale takes a minute, the till is one phone, and the next customer might pay any of eight ways.
+
+- **Farmers market vendors** · Take whatever your customers carry, and close the day without a shoebox of slips.
+- **Food trucks** · A faster line when everyone can pay their way, with tips when you turn them on.
+- **Market managers** · Every stall’s SNAP, Double Up and market-buck tokens counted by program, so turning them in adds up. A market account with one statement for every vendor is planned.
+
+## How it works: Ring it up, take it any way, close the day
+
+1. **Ring it up.** Tap items on your quick keys, or type the weight for produce sold by the pound. Tax is added at your market’s rate, and nothing SNAP pays for is taxed.
+2. **They pay on their own phone.** The customer scans the code on your screen and pays by card, Apple Pay, Google Pay or Cash App Pay. No app to install, no account to make. Or take a card tap through the Square app.
+3. **Or any other way.** For Zelle or Venmo, they see your handle, the amount and a memo code, and you tap “I see it”. Cash shows the change due. Tokens are counted by program. One sale can be split as many ways as it takes.
+4. **Close the day.** Totals by how people paid, the cash you should have against the cash you counted, the tokens to turn in, and a spreadsheet for your bookkeeper.
+
+## At closing: The whole day, in one place
+
+Every payment carries a mark that says how sure you can be of it, so you know what to chase before you pack up.
+
+- **Confirmed by Square** Cards, Apple Pay, Google Pay and Cash App Pay, checked with Square itself.
+- **Confirmed by you** Zelle, checks, and Venmo or Cash App sent to your own handle, once you tap “I see it”.
+- **Tokens** SNAP, Double Up and market-buck tokens, which the market pays back.
+- **Counted** Cash, checked against what the day’s sales say you should have.
+
+## Why vendors want it: Every sale, none of the juggling
+
+- **Never turn a customer away.** Card, phone, app, token or cash: whatever they carry, you can take it, on one screen.
+- **Your money, your account.** Card and wallet payments go straight to your own Square account. Canopy never holds or moves money, and card numbers never touch it.
+- **No cut of your sales.** Canopy adds no fee to your payments on top of Square’s own card fees.
+- **SNAP rules built in.** Your market keeps its EBT machine. Canopy counts the tokens and checks what they can buy: no SNAP for hot food, Double Up for produce only, and no cash change.
+- **Two phones, one stall.** A helper’s phone joins by scanning a code, and both see every sale as it happens.
+- **Receipts anyone can check.** A customer who pays by card or app gets a receipt as a code, signed so anyone can check it’s real.
+
+## Where it stands: Working end to end, on its way to a first market
+
+### Works today, in testing
+
+A whole market day runs end to end with a stand-in for Square: ringing up, every way to pay, refunds, two phones, receipts and closing.
+
+### Next
+
+Square’s test environment, then a first farmers market with real vendors.
+
+### Planned
+
+Canopy’s own Tap to Pay on iPhone, card readers over Bluetooth, digital market tokens in place of paper, ordering from the line for food trucks, and Stripe for vendors without Square.
+
+## Questions: What vendors ask first
+
+**Does Canopy hold my money?** No. Card and wallet payments go straight to your own Square account. Zelle, Venmo, tokens and cash are written in Canopy’s ledger, but the money never passes through us.
+
+**Do my customers need an app?** No. They scan the code on your screen with their phone’s camera and pay in the browser.
+
+**Do I need a Square account?** For card and wallet payments, yes: you connect your own. Stripe, for vendors without Square, is planned.
+
+**What phone do I need?** An iPhone, to start. Canopy installs from the browser to your home screen, with nothing to download from an app store.
+
+**What will it cost?** The price isn’t set yet, and Canopy won’t take a cut of your sales. Markets and vendors who try it early help shape it.
+
+## More from CLI ’n’ Amen co.
+
+- **Irie.** Open source · version 1.0 The app our agents run in: every AI coding agent you have, side by side in one calm view. Free, for Mac and Linux. [More about Irie](https://clinamenco.com/products/irie/)
+- **A social media tool.** In early development Plan, draft and post to every channel from one place, and nothing goes out until you say yes. [More about the social media tool](https://clinamenco.com/products/social/)
+
+## Want Canopy at your market?
+
+Markets and vendors who want to try it early, write to us. We reply within one business day.
+
+[Write to us about Canopy](mailto:clinamenco@protonmail.com?subject=Trying%20Canopy%20early)
+
+[or book a free Quick Check](https://calendly.com/clinamenco)
+
+---
+
+Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
+
+Clinamen · United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+
+For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/canopy/index.html.md). Updated 10 November 2026.
+
+© 2026 Clinamen.
+
+---
+
+# A social media tool that waits for your yes
+
+> In early development at CLI ’n’ Amen co.: a social media tool that plans, drafts and posts to every channel you use from one place, and publishes nothing without your approval.
+
+- Page: https://clinamenco.com/products/social/
+- Book a free Quick Check: https://calendly.com/clinamenco
+- Email: clinamenco@protonmail.com
+- Updated: 2026-11-10
+
+In early development
+
+## Social media that waits for your yes
+
+We’re building a tool that plans, drafts and posts to every channel you use, from one place. Its AI will suggest, and you decide: nothing is published, changed or deleted without your approval.
+
+[Hear when it’s ready](mailto:clinamenco@protonmail.com?subject=The%20social%20media%20tool)
+
+[See how it works](https://clinamenco.com/products/social/#how)
+
+For owners who do their own posting, and for the people who post for them.
+
+## How it works: Draft, approve, and it goes out on time
+
+1. **Connect your accounts.** Instagram, Threads and more, each through the network’s own official connection. It never asks for your main password.
+2. **Drafts land in one queue.** Write a post, or drop ready posts into a shared folder for it to pick up. Each draft waits for you, with a preview for every network.
+3. **You say yes.** Approve a post to go now or at a set time. Change it after you approve it, and it waits for you again.
+4. **It posts, and checks.** Each post goes out at its time and is checked once it’s live. If the time slips by, the post waits for you instead of going out late.
+
+## Why it helps: Your posts, out on time, and never without you
+
+- **Nothing goes out without your yes.** Every post is approved by a person, and every change is logged.
+- **One queue for every channel.** Write once, with a version for each network, and see the week in one place.
+- **On time, or not at all.** A post goes out in its window, or waits for you. A stale post never goes out on its own.
+- **A note every morning.** What went out, what comes next, and what needs you, in one short note.
+- **Brands and clients kept apart.** Each brand or client gets its own accounts, posts and settings, with roles for who drafts and who approves.
+- **AI that asks first.** On the way: drafts from your own material, for you to approve. It will never post on its own.
+
+## Where it stands: Early, and moving
+
+### Works today, in testing
+
+Posting to several networks after approval, scheduling, a shared drafts folder, the morning note, and a workspace for each brand with its own logins.
+
+### Next
+
+AI drafts from your own material, a weekly report on what worked, and more networks.
+
+### Want in early?
+
+Tell us what you post, where and how often. [Write to us](mailto:clinamenco@protonmail.com?subject=The%20social%20media%20tool), and we’ll tell you when it’s ready.
+
+## More from CLI ’n’ Amen co.
+
+- **Irie.** Open source · version 1.0 The app our agents run in: every AI coding agent you have, side by side in one calm view. Free, for Mac and Linux. [More about Irie](https://clinamenco.com/products/irie/)
+- **Canopy.** In development One checkout on a vendor’s phone for every way a customer pays, and one ledger at closing. For market stalls and food trucks. [More about Canopy](https://clinamenco.com/products/canopy/)
+
+## Want to hear when it’s ready?
+
+Write to us with what you post and where. We reply within one business day.
+
+[Write to us](mailto:clinamenco@protonmail.com?subject=The%20social%20media%20tool)
+
+[or book a free Quick Check](https://calendly.com/clinamenco)
+
+---
+
+Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
+
+Clinamen · United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+
+For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/social/index.html.md). Updated 10 November 2026.
+
+© 2026 Clinamen.

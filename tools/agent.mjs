@@ -1,17 +1,18 @@
-// Writes the files for AI agents and search engines from the page itself, so they never drift from it:
-//   docs/index.html.md   the whole page as Markdown (llmstxt.org's convention: a page's text twin at URL + .md)
-//   docs/llms-full.txt   the same text, under the name AI tools look for
-//   docs/llms.txt        a short guide for AI agents: what the firm is, the offers and prices, where to look
-//   docs/sitemap.xml     the page and every picture on it (Google's image sitemap)
+// Writes the files for AI agents and search engines from the pages themselves, so they never drift from them:
+//   docs/index.html.md   the whole home page as Markdown (llmstxt.org's convention: a page's text twin at URL + .md)
+//   docs/products/*/index.html.md   the same for each product page (the list of pages is in cdp.mjs)
+//   docs/llms-full.txt   the home page's text, then each product page's, under the name AI tools look for
+//   docs/llms.txt        a short guide for AI agents: what the firm is, the offers and prices, the products, where to look
+//   docs/sitemap.xml     every page and every picture on it (Google's image sitemap)
 // Then it checks what the page repeats elsewhere: the JSON-LD parses; every price in the JSON-LD, the
 // meta descriptions, the FAQ and site.js is one the page shows; every picture has alt text, a size and
 // a file behind it; the dates agree; and the tools site.js gives AI agents in the browser (WebMCP)
 // register and answer, tried against a stand-in for the browser's API. A failed check stops with the list.
 // Usage: node tools/agent.mjs   (node tools/shoot.mjs runs it as its last step)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
-import { launch, pageUrl, root } from "./cdp.mjs";
+import { launch, pages, pageUrl, root } from "./cdp.mjs";
 
 // Runs inside the page. It must not use anything from this module's scope.
 function extract() {
@@ -63,6 +64,7 @@ function extract() {
     for (const c of el.children) {
       if (!shown(c)) continue;
       const t = c.tagName.toUpperCase();
+      if (t === "NAV") continue; // breadcrumbs: the Markdown names the page's address instead
       if (c.classList.contains("kicker")) { kicker = text(c); continue; }
       if (c.classList.contains("lbl")) { label = text(c); continue; }
       if (c.classList.contains("headword")) {
@@ -90,6 +92,8 @@ function extract() {
       else if (t === "FIGURE") figure(c);
       else if (t === "DETAILS") details(c);
       else if (t === "FORM") form(c);
+      else if (t === "PRE") out.push("```\n" + c.textContent.trim() + "\n```");
+      else if (t === "A") { const x = text(c), h = c.getAttribute("href") || ""; if (x && h && h !== "#top") out.push(`[${x}](${abs(h)})`); }
       else if (t !== "SVG" && t !== "PICTURE" && t !== "IMG") walk(c);
     }
   }
@@ -135,8 +139,9 @@ function extract() {
       if (c.tagName === "DT") dt = text(c);
       else if (c.tagName === "DD") rows.push([dt, text(c)]);
     }
-    if (rows.every(([, dd]) => dd.length < 140)) out.push(rows.map(([a, b]) => `- **${a}:** ${b}`).join("\n"));
-    else for (const [a, b] of rows) out.push(`**${a}.** ${b}`);
+    const end = (a, p) => (/[.!?]$/.test(a) ? a : a + p); // a question keeps its own mark
+    if (rows.every(([, dd]) => dd.length < 140)) out.push(rows.map(([a, b]) => `- **${end(a, ":")}** ${b}`).join("\n"));
+    else for (const [a, b] of rows) out.push(`**${end(a, ".")}** ${b}`);
   }
   function table(tb) {
     const cap = $("caption", tb);
@@ -192,9 +197,10 @@ function extract() {
   const ld = $$('script[type="application/ld+json"]').map((s) => s.textContent);
   let org = "";
   try { for (const block of ld) for (const n of [].concat(JSON.parse(block)["@graph"] || JSON.parse(block))) if (/Organization|Service|Business/.test(n["@type"]) && n.name) org = org || n.name; } catch { /* the checks report it */ }
-  const title = org && org !== siteName ? `${siteName} (${org})` : siteName;
+  const home = !!$(".hero");
+  const title = !home ? document.title.replace(/\s*·[^·]*$/, "") : org && org !== siteName ? `${siteName} (${org})` : siteName;
   const booking = ($('a[href*="calendly.com"]') || {}).href || "";
-  const email = (($('a[href^="mailto:"]') || {}).href || "").replace("mailto:", "");
+  const email = (($('a[href^="mailto:"]') || {}).href || "").replace("mailto:", "").replace(/\?.*$/, "");
   const updated = ($(".foot time[datetime]") || {}).dateTime || "";
   const glance = {};
   $$(".glance dt").forEach((dt) => { glance[text(dt)] = text(dt.nextElementSibling); });
@@ -218,13 +224,13 @@ function extract() {
   const md = [
     `# ${title}`,
     `> ${meta("description")}`,
-    [`- Website: ${base}`, booking && `- Book a free Quick Check: ${booking}`, email && `- Email: ${email}`, updated && `- Updated: ${updated}`].filter(Boolean).join("\n"),
+    [`- ${home ? "Website" : "Page"}: ${base}`, booking && `- Book a free Quick Check: ${booking}`, email && `- Email: ${email}`, updated && `- Updated: ${updated}`].filter(Boolean).join("\n"),
     ...body,
     "---",
     ...foot,
   ].join("\n\n") + "\n";
 
-  const llms = [
+  const llms = !home ? "" : [
     `# ${title}`,
     `> ${meta("description")}`,
     [text($(".lede", hero)), text($(".fine", hero))].filter(Boolean).join(" "),
@@ -261,7 +267,7 @@ function extract() {
   const faqItems = faq ? $$("details", faq).map((d) => ({ name: !!$('[itemprop="name"]', d), text: !!$('[itemprop="text"]', d) })) : [];
 
   return {
-    base, md, llms, ld, updated, imgs, faqItems,
+    base, md, llms, ld, updated, imgs, faqItems, title, h1: text($("h1")),
     description: meta("description"), ogDescription: meta("og:description"), ogImage: meta("og:image"),
     priceText, notFaq, faqText: faq ? faq.textContent : "", cardNums, oneFix,
     allText: main.textContent,
@@ -381,22 +387,70 @@ export async function writeAgentFiles(browser) {
   if (!x.updated) problems.push('the footer has no <time datetime="…"> for the date the page changed');
   else if (page2 && page2.dateModified !== x.updated) problems.push(`the footer says updated ${x.updated}, the JSON-LD's dateModified ${page2.dateModified}`);
 
+  // The other pages: the same text twin, and the checks that apply to a page with no prices of its own.
+  const others = [];
+  for (const p of pages.filter((q) => q.url !== pageUrl)) {
+    const tab = await browser.open(p.url + "?still", { w: 1440, h: 900 });
+    const y = await tab.evaluate(`(${extract.toString()})()`);
+    await tab.close();
+    const at = (what) => `${p.file}: ${what}`;
+    const g = [];
+    for (const block of y.ld) {
+      try { g.push(JSON.parse(block)); } catch (e) { problems.push(at("JSON-LD does not parse: " + e.message)); }
+    }
+    const shown = new Set([0, ...money(y.allText)]);
+    for (const pr of ldPrices(g)) if (!shown.has(pr)) problems.push(at(`JSON-LD has the price $${pr}, which the page doesn't show`));
+    for (const [what, t] of [["meta description", y.description], ["og:description", y.ogDescription]]) {
+      for (const pr of money(t)) if (!shown.has(pr)) problems.push(at(`the ${what} says $${pr}, which the page doesn't`));
+    }
+    const pics = new Set();
+    for (const i of y.imgs) {
+      if (!i.alt) problems.push(at(`<img src="${i.src}"> has no alt text`));
+      if (!i.width || !i.height) problems.push(at(`<img src="${i.src}"> has no width and height`));
+      for (const f of [i.src, ...i.sources]) if (f && !existsSync(join(root, dirname(p.file), f))) problems.push(at(`${f} is missing`));
+      pics.add(new URL(i.src, y.base).href);
+    }
+    const ns = ldNodes(g);
+    for (const n of ns) {
+      if (n["@type"] !== "ImageObject" || !n.contentUrl) continue;
+      const f = local(x.base, n.contentUrl);
+      if (f && !existsSync(f)) problems.push(at(`the JSON-LD names ${n.contentUrl}, but ${f} is missing`));
+      if (f) pics.add(n.contentUrl);
+    }
+    const ogFile = local(x.base, y.ogImage);
+    if (!ogFile || !existsSync(ogFile)) problems.push(at(`og:image ${y.ogImage} has no file behind it`));
+    else pics.add(y.ogImage);
+    if (y.base !== x.base + p.path) problems.push(at(`the canonical address is ${y.base}, not ${x.base + p.path}`));
+    const wp = ns.find((n) => [].concat(n["@type"]).includes("WebPage"));
+    if (!y.updated) problems.push(at('the footer has no <time datetime="…"> for the date the page changed'));
+    else if (wp && wp.dateModified !== y.updated) problems.push(at(`the footer says updated ${y.updated}, the JSON-LD's dateModified ${wp.dateModified}`));
+    writeFileSync(join(root, dirname(p.file), "index.html.md"), y.md);
+    others.push({ ...p, ...y, pics });
+  }
+
+  const entry = (loc, lastmod, pics) => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+${[...pics].sort().map((u) => `    <image:image><image:loc>${u}</image:loc></image:image>`).join("\n")}
+  </url>`.replace(/\n\n/g, "\n");
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>${x.base}</loc>
-    <lastmod>${x.updated}</lastmod>
-${[...pictures].sort().map((u) => `    <image:image><image:loc>${u}</image:loc></image:image>`).join("\n")}
-  </url>
+${[entry(x.base, x.updated, pictures), ...others.map((o) => entry(o.base, o.updated, o.pics))].join("\n")}
 </urlset>
 `;
+  // llms.txt lists each product page under its own heading, before "Optional", which llmstxt.org keeps last.
+  const productList = "## Products\n\n" + others.map((o) => `- [${o.h1}](${o.base}index.html.md): ${o.description}`).join("\n");
+  const llms = x.llms.includes("\n\n## Optional\n\n")
+    ? x.llms.replace("\n\n## Optional\n\n", `\n\n${productList}\n\n## Optional\n\n`)
+    : x.llms + "\n" + productList + "\n";
+  const full = [x.md, ...others.map((o) => o.md)].join("\n---\n\n");
   writeFileSync(join(root, "docs/index.html.md"), x.md);
-  writeFileSync(join(root, "docs/llms-full.txt"), x.md);
-  writeFileSync(join(root, "docs/llms.txt"), x.llms);
+  writeFileSync(join(root, "docs/llms-full.txt"), full);
+  writeFileSync(join(root, "docs/llms.txt"), llms);
   writeFileSync(join(root, "docs/sitemap.xml"), sitemap);
-  console.log(`wrote docs/index.html.md and docs/llms-full.txt (${Math.round(x.md.length / 1024)} KB), docs/llms.txt, docs/sitemap.xml (${pictures.size} pictures)`);
+  console.log(`wrote docs/index.html.md, ${others.length} product pages' index.html.md, docs/llms-full.txt (${Math.round(full.length / 1024)} KB), docs/llms.txt, docs/sitemap.xml (${1 + others.length} pages, ${pictures.size + others.reduce((n, o) => n + o.pics.size, 0)} pictures)`);
   if (problems.length) throw new Error("checks failed:\n- " + problems.join("\n- "));
-  console.log("checks passed: prices, pictures, dates, WebMCP tools");
+  console.log("checks passed: prices, pictures, dates, WebMCP tools, product pages");
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

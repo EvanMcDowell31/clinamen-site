@@ -11,7 +11,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
-import { launch, pageUrl, root } from "./cdp.mjs";
+import { launch, pages, pageUrl, root } from "./cdp.mjs";
 import { writeAgentFiles } from "./agent.mjs";
 
 const fileUrl = (p) => pathToFileURL(join(root, p)).href;
@@ -56,6 +56,18 @@ const shots = [
   { out: "review/full-desktop.png", w: 1440, h: 900, q: "?still", full: true },
   { out: "review/full-phone.png", ...phone, q: "?still", full: true },
   { out: "review/full-phone-dark.png", ...phone, q: "?still", full: true, dark: true },
+  { out: "review/sites-desktop.png", w: 1440, h: 900, q: "?still#sites" },
+  { out: "review/sites-phone.png", ...phone, q: "?still#sites" },
+  { out: "review/products-desktop.png", w: 1440, h: 900, q: "?still#products" },
+  { out: "review/products-phone.png", ...phone, q: "?still#products" },
+  { out: "review/products-phone-dark.png", ...phone, q: "?still#products", dark: true },
+  // Each product page (docs/products/<name>/), named as in cdp.mjs.
+  ...pages.filter((p) => p.name !== "home").flatMap(({ name }) => [
+    { out: `review/${name}-desktop.png`, page: name, w: 1440, h: 900, q: "?still" },
+    { out: `review/${name}-phone.png`, page: name, ...phone, q: "?still" },
+    { out: `review/${name}-full-desktop.png`, page: name, w: 1440, h: 900, q: "?still", full: true },
+    { out: `review/${name}-full-phone-dark.png`, page: name, ...phone, q: "?still", full: true, dark: true },
+  ]),
   { out: "docs/img/ai-for-your-business-one-chore-at-a-time.png", w: 1200, h: 630, q: "?still&og" },
   { out: "docs/apple-touch-icon.png", w: 180, h: 180, q: "?still&icon" },
   { out: "docs/img/small-business-website-on-a-phone.webp", ...phone, q: "?still", webp: 80 },
@@ -111,7 +123,7 @@ try {
     save("docs/img/cli-n-amen-co-logo.png", (await icon(512)).png);
 
     for (const s of shots) {
-      const tab = await browser.open(pageUrl + s.q, s);
+      const tab = await browser.open((s.page ? pages.find((p) => p.name === s.page).url : pageUrl) + s.q, s);
       await tab.evaluate("location.hash && document.querySelector(location.hash).scrollIntoView()");
       const opts = s.webp ? { format: "webp", quality: s.webp } : { format: "png" };
       if (s.full) {

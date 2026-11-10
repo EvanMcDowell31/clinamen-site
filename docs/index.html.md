@@ -11,6 +11,10 @@
 
 Automations, websites and software for owner-run businesses across the United States. A fixed price, a written scope, money back, and work that is live within days.
 
+[Book a free Quick Check](https://calendly.com/clinamenco)
+
+[See pricing](https://clinamenco.com/#pricing)
+
 AI agents do the first pass. The founder checks every result before you see it.
 
 ## The old rule: Cheap, fast and good. The old rule said pick two.
@@ -58,7 +62,7 @@ Owner-run businesses lose hours every week to the same few chores. We hand one o
 
 One page, built for phones first: your name, services, prices, hours and a booking button, written to be found in local search. Live on your own domain within 5 business days. You own the domain and every file. There is no monthly fee: the only running cost is your domain, about $10 to $20 a year.
 
-This site is one. So is [briandominguezvoice.com](https://briandominguezvoice.com/), an audiobook narrator’s site.
+This site is one. So is [briandominguezvoice.com](https://briandominguezvoice.com/), an audiobook narrator’s site, and two demos for local shops are just below.
 
 **$195** founding price · standard $390 · changes and new pages under Care
 
@@ -66,9 +70,17 @@ This site is one. So is [briandominguezvoice.com](https://briandominguezvoice.co
 
 *This site, on a phone*
 
+### Sites we’ve made
+
+- **Brian Dominguez, audiobook narrator.** Live Every audiobook he has narrated, a page per title with a sample and store links, and a page for authors who want to hire him. [Visit Brian’s site](https://briandominguezvoice.com/)
+- **Bolivar Coffee, a café redesign.** Demo A redesign concept for a Colombian café with shops in Smyrna and Marietta, Georgia: the menu, both cafés’ hours and pickup orders, on one page. [See the café demo](https://evanmcdowell31.github.io/bolivar-site/)
+- **Elevate Smoke, Vape & CBD.** Demo A concept for a smoke and vape shop in Marietta, Georgia: what’s in the case, the week’s specials, directions, and an age check at the door. [See the smoke shop demo](https://evanmcdowell31.github.io/elevate-site/)
+
+We make demos on spec, without the business taking part, to show what we would build. Their names and marks belong to them.
+
 ### Software: Software for the way you take money
 
-**Canopy** is our checkout for market stalls and food trucks, in development: one screen on the vendor’s phone for every way a customer pays (card tap, phone wallets, Cash App, Venmo, PayPal, Zelle, SNAP and market tokens, and cash). Card and wallet payments land in the vendor’s own Square account, and Canopy never holds the money. Zelle, Venmo, tokens and cash go in the same ledger, so the day adds up in one place, and there is nothing for the customer to install. We are starting with farmers markets: markets and vendors who want to try it early, [write to us](mailto:clinamenco@protonmail.com).
+**Canopy** is our checkout for market stalls and food trucks, in development: one screen on the vendor’s phone for every way a customer pays (card tap, phone wallets, Cash App, Venmo, PayPal, Zelle, SNAP and market tokens, and cash). Card and wallet payments land in the vendor’s own Square account, and Canopy never holds the money. Zelle, Venmo, tokens and cash go in the same ledger, so the day adds up in one place, and there is nothing for the customer to install. We are starting with farmers markets: markets and vendors who want to try it early, [write to us](mailto:clinamenco@protonmail.com). [See how Canopy works](https://clinamenco.com/products/canopy/).
 
 **Custom software.** When a chore needs more than an automation, we build the tool: a small server, a web app your team installs on their phones, an iPhone app. Payments go through your own Square or Stripe account, so you keep your money and your processor.
 
@@ -133,9 +145,17 @@ $100 off for both of you once a business you refer pays for its first job. Never
 
 1. **You book a Quick Check.** 30 minutes on your weekly chores. Within one business day, a one-page written list: 3 chores, each with a fixed price.
 2. **We build it.** In the tools you already use, working within 5 business days of access, with a handover and a one-page “how it works”.
-3. **The founder checks everything.** AI agents, run by [Irie](https://github.com/irie-people/irie), the founder’s own open-source platform, on Anthropic’s Claude, do the first pass. He checks every result before it reaches you. Then 30 days of fixes.
+3. **The founder checks everything.** AI agents, run by [Irie](https://clinamenco.com/products/irie/), the founder’s own open-source platform, on Anthropic’s Claude, do the first pass. He checks every result before it reaches you. Then 30 days of fixes.
 
 The claims we make are the ones we can keep: a fixed price, a written scope, a deadline, and money back. No invented reviews or results. No claims we can’t back. No pressure.
+
+## Products: We build our own software, too
+
+With the same agents and the same checks as your job. One is out and free; two are on the way.
+
+- **Irie.** Open source · version 1.0 The app our agents run in: every AI coding agent you have, side by side in one calm view. Free, for Mac and Linux. [More about Irie](https://clinamenco.com/products/irie/)
+- **Canopy.** In development One checkout on a vendor’s phone for every way a customer pays, and one ledger at closing. For market stalls and food trucks. [More about Canopy](https://clinamenco.com/products/canopy/)
+- **A social media tool.** In early development Plan, draft and post to every channel from one place, and nothing goes out until you say yes. [More about the social media tool](https://clinamenco.com/products/social/)
 
 ## The founder: The person checking your job is the founder.
 
@@ -268,11 +288,17 @@ Clinamen is Lucretius’ word for the swerve: atoms fall straight down until one
 
 Thirty minutes, no obligation, and a written answer within one business day.
 
+[Book a free Quick Check](https://calendly.com/clinamenco)
+
+[or write to clinamenco@protonmail.com](mailto:clinamenco@protonmail.com)
+
 ---
 
 Clinamen · Marietta, Georgia, working with small businesses across the United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
-The figures and pictures on this page, except the founder’s photo, are © 2026 Clinamen: to use one, [write to us](mailto:clinamenco@protonmail.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
+Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
+
+The figures and pictures on this page, except the founder’s photo and the pictures of the sites under Websites, are © 2026 Clinamen: to use one, [write to us](mailto:clinamenco@protonmail.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
 
 For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 10 November 2026.
 

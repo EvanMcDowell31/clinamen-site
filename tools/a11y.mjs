@@ -1,16 +1,18 @@
-// The page's accessibility check; run it before each publish. axe-core checks WCAG 2.2
+// The site's accessibility check; run it before each publish. It checks every page, the
+// home page and each product page under docs/products/. axe-core checks WCAG 2.2
 // A and AA plus best practice, in both colour schemes, at desktop, phone and 320 px
 // widths. Then come the checks axe can't make: no sideways scrolling, a keyboard walk
 // in which every stop shows our focus ring clear of the sticky header, the hero's
 // pause button, reduced motion, and WCAG's text-spacing test.
-// Usage: node tools/a11y.mjs [--json FILE]   prints what fails and exits 1 on any failure.
+// Usage: node tools/a11y.mjs [--page NAME] [--json FILE]   prints what fails and exits 1 on
+// any failure. --page checks one page: home, irie, canopy or social.
 // The first run fetches axe-core from jsDelivr into ~/Library/Caches/clinamen-site
 // and checks it against the hash below.
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { launch, pageUrl } from "./cdp.mjs";
+import { launch, pages as allPages } from "./cdp.mjs";
 
 const AXE = { version: "4.10.2", sha256: "b511cd9dec01c76f4b2ad1723b66b6db37d4c2eb4ed199076e1829d9ee7b75e3" };
 const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"];
@@ -38,6 +40,10 @@ const views = [
   { name: "phone dark", ...phone, dark: true },
   { name: "320px", w: 320, h: 640, mobile: true },
 ];
+
+const only = process.argv.indexOf("--page");
+const pages = only > 0 ? allPages.filter((p) => p.name === process.argv[only + 1]) : allPages;
+if (!pages.length) throw new Error(`no page called ${process.argv[only + 1]}: try ${allPages.map((p) => p.name).join(", ")}`);
 
 // Page-side helpers: withHelpers(expr) evaluates expr where they are in scope.
 const HELPERS = `
@@ -92,8 +98,9 @@ const report = { views: {} };
 
 const axe = await axeSource();
 const browser = await launch();
-for (const view of views) {
-  const tab = await browser.open(pageUrl, view);
+for (const page of pages) for (const each of views) {
+  const view = { ...each, name: `${page.name} ${each.name}` };
+  const tab = await browser.open(page.url, view);
   const out = (report.views[view.name] = {});
 
   // axe-core
@@ -192,15 +199,15 @@ for (const view of views) {
 }
 
 // Reduced motion: nothing moves, nothing scrolls smoothly.
-{
-  const tab = await browser.open(pageUrl, { ...views[0], reducedMotion: true });
+for (const page of pages) {
+  const tab = await browser.open(page.url, { ...views[0], reducedMotion: true });
   const still = await tab.evaluate(`({
     running: document.getAnimations().filter((a) => a.playState === "running").length,
     scroll: getComputedStyle(document.documentElement).scrollBehavior,
   })`);
-  report.reducedMotion = still;
-  if (still.running) fail("reduced motion", `${still.running} animations still run`);
-  if (still.scroll !== "auto") fail("reduced motion", "scrolling is still smooth");
+  (report.reducedMotion ||= {})[page.name] = still;
+  if (still.running) fail(`${page.name} reduced motion`, `${still.running} animations still run`);
+  if (still.scroll !== "auto") fail(`${page.name} reduced motion`, "scrolling is still smooth");
   await tab.close();
 }
 await browser.close();
@@ -213,4 +220,4 @@ if (failures.length) {
   console.log(`${failures.length} failures`);
   process.exit(1);
 }
-console.log(`pass: axe (WCAG 2.2 AA), reflow, keyboard, motion and text spacing in ${views.length} views`);
+console.log(`pass: axe (WCAG 2.2 AA), reflow, keyboard, motion and text spacing in ${views.length} views of ${pages.length} page${pages.length === 1 ? "" : "s"}`);

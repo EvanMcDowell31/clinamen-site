@@ -24,12 +24,19 @@ Automations, websites and software for owner-run businesses across the United St
 - [The math on one chore](https://clinamenco.com/#math): Three hours a week is 150 hours a year.
 - [Pricing](https://clinamenco.com/#pricing): Four ways to work with us
 - [How it works](https://clinamenco.com/#how): Three steps, one person accountable
+- [Products](https://clinamenco.com/#products): We build our own software, too
 - [The founder](https://clinamenco.com/#owner): The person checking your job is the founder.
 - [Who it’s for](https://clinamenco.com/#who): Owner-run businesses of 2 to 20 people
 - [The name](https://clinamenco.com/#name): Why Clinamen
 - [Your data](https://clinamenco.com/#data): How we handle your data
 - [Questions](https://clinamenco.com/#faq): What owners ask before they book
 - [Start with a free Quick Check.](https://clinamenco.com/#book)
+
+## Products
+
+- [Irie](https://clinamenco.com/products/irie/index.html.md): Irie is the free, open-source app our AI agents run in: coding agents from any supplier, on any model, side by side in one calm view, each in its own git worktree. Version 1.0 for Mac and Linux.
+- [Canopy](https://clinamenco.com/products/canopy/index.html.md): Canopy, in development, puts every way a customer pays on one screen on a market vendor’s or food truck’s phone: card taps, Apple Pay, Cash App, Venmo, Zelle, SNAP tokens and cash, with one ledger at closing. Cards land in your own Square account.
+- [Social media that waits for your yes](https://clinamenco.com/products/social/index.html.md): In early development at CLI ’n’ Amen co.: a social media tool that plans, drafts and posts to every channel you use from one place, and publishes nothing without your approval.
 
 ## Optional
 
