@@ -1,6 +1,6 @@
-// Screenshot modes (?still stops the motion, ?og draws the share card, ?icon the app icon),
-// the hero's pause button, and the small calculator in "The math on one chore".
-// The page works without any of it.
+// Screenshot modes (?still stops the motion, ?og draws the share card, ?icon the app icon,
+// ?theme=light or dark), the hero's pause button, the light and dark switch in the header,
+// and the small calculator in "The math on one chore". The page works without any of it.
 (() => {
   const q = new URLSearchParams(location.search);
   const root = document.documentElement;
@@ -23,6 +23,33 @@
     set(kept === "paused", false);
     pause.hidden = false;
     pause.addEventListener("click", () => set(!root.classList.contains("paused"), true));
+  }
+
+  // The switch: a choice is kept in localStorage, and the inline script in <head> applies it
+  // before the page paints. With no choice, the system setting rules. ?theme= sets one
+  // for a screenshot without keeping it.
+  const pick = q.get("theme");
+  if (pick === "light" || pick === "dark") root.dataset.theme = pick;
+  const toggle = document.getElementById("theme-toggle");
+  if (toggle) {
+    const system = window.matchMedia("(prefers-color-scheme: dark)");
+    const isDark = () => (root.dataset.theme ? root.dataset.theme === "dark" : system.matches);
+    const sync = () => {
+      const next = isDark() ? "light" : "dark";
+      toggle.setAttribute("aria-label", "Switch to " + next + " theme");
+      toggle.title = "Switch to " + next + " theme";
+      document.querySelectorAll('meta[name="theme-color"]').forEach((m) => {
+        m.content = isDark() ? "#131211" : "#f6f1e8";
+      });
+    };
+    toggle.hidden = false;
+    sync();
+    toggle.addEventListener("click", () => {
+      root.dataset.theme = isDark() ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) { /* storage blocked: still switches */ }
+      sync();
+    });
+    if (system.addEventListener) system.addEventListener("change", sync);
   }
 
   const hours = document.getElementById("hours");

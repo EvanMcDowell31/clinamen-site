@@ -24,7 +24,7 @@
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
     --paper: #131211;
     --card: #1b1917;
@@ -42,6 +42,25 @@
     --term-dim: #8a8278;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px -18px rgba(0, 0, 0, .6);
   }
+}
+/* The header's switch can choose dark by hand: the same tokens as the block above. Keep the two in step. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #131211;
+  --card: #1b1917;
+  --ink: #ebe5d8;
+  --muted: #a39c90;
+  --line: #2b2824;
+  --accent: #5cb5a9;
+  --accent-strong: #7fc9be;
+  --on-accent: #0f1a18;
+  --amber: #e2a650;
+  --amber-text: #e2a650;
+  --edge: #7a7368;
+  --term: #0c0b0a;
+  --term-ink: #e8e1d3;
+  --term-dim: #8a8278;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px -18px rgba(0, 0, 0, .6);
 }
 
 * { box-sizing: border-box; }
@@ -97,6 +116,17 @@ code { font-family: var(--mono); }
 .nav { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
 .nav a { color: var(--muted); text-decoration: none; }
 .nav a:hover { color: var(--ink); }
+.theme-toggle { display: inline-grid; place-items: center; flex: none; width: 40px; height: 40px; padding: 0; border: 1px solid var(--edge); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; transition: background .15s, border-color .15s; }
+.theme-toggle:hover { background: var(--card); border-color: var(--muted); }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle svg { grid-area: 1 / 1; width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .i-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .i-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .i-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .i-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .i-moon { display: none; }
+}
 
 /* Buttons */
 .btn {
@@ -402,6 +432,8 @@ body.og, body.icon { background: var(--term); }
   .nav { display: none; }
   .bar { gap: 12px; min-height: 58px; }
   .btn.small { margin-left: auto; }
+  .theme-toggle { margin-left: auto; }
+  .theme-toggle:not([hidden]) + .btn.small { margin-left: 0; }
   .btn.small .long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   body { font-size: 16px; }
   .cards li { padding: 20px; }

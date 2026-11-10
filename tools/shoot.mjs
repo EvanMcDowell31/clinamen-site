@@ -10,6 +10,8 @@ const shots = [
   { out: "review/home-desktop.png", w: 1440, h: 900, q: "?still" },
   { out: "review/home-desktop-dark.png", w: 1440, h: 900, q: "?still", dark: true },
   { out: "review/home-phone.png", ...phone, q: "?still" },
+  { out: "review/home-phone-dark-chosen.png", ...phone, q: "?still&theme=dark" },
+  { out: "review/home-desktop-light-chosen.png", w: 1440, h: 900, q: "?still&theme=light", dark: true },
   { out: "review/three-desktop.png", w: 1440, h: 900, q: "?still#three" },
   { out: "review/three-phone.png", ...phone, q: "?still#three" },
   { out: "review/compare-phone.png", ...phone, q: "?still#compare" },

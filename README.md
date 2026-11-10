@@ -25,11 +25,12 @@ More in `review/`: every section at phone and desktop width, dark mode, and both
 9. **Why Clinamen:** a dictionary entry, Fig. 1 (the small lean and the different landing), and how to say the name.
 10. **Your data**, and the closing booking band.
 
-The look: Fraunces for headings, JetBrains Mono for the CLI half of the wordmark, labels and prices, the system sans for text. Teal for actions, amber for the swerving atom, and a darker amber for small labels so they stay readable. Light and dark follow the visitor’s setting. Both fonts are served from `docs/fonts/` under the SIL Open Font License, with the license files alongside, so the page loads nothing from other servers.
+The look: Fraunces for headings, JetBrains Mono for the CLI half of the wordmark, labels and prices, the system sans for text. Teal for actions, amber for the swerving atom, and a darker amber for small labels so they stay readable. Light and dark follow the visitor’s setting, and the round switch beside Book in the header overrides it; the choice is kept in their browser. Both fonts are served from `docs/fonts/` under the SIL Open Font License, with the license files alongside, so the page loads nothing from other servers.
 
 ## Editing it
 
 - **Prices and terms:** the `pricing` section of `docs/index.html` (one `.price` block per offer, the three notes), the `.line-price` lines under “What we do”, the comparison table under “The old rule”, the calculator’s two prices in `docs/site.js`, and the JSON-LD block in `<head>`.
+- **Colours:** the tokens at the top of `docs/style.css`. The dark set is written twice, once for the system setting and once for the header switch: change both.
 - **Email and booking link:** search `docs/index.html` for `protonmail` and `calendly`.
 - **The photo:** `docs/evan.jpg`, a 520-pixel square JPEG.
 - **Screenshots, the share card (`docs/og.png`), the icon and the “this site on a phone” proof (`docs/proof-phone.png`, copied from `review/home-phone.png`):** `node tools/shoot.mjs` (Node 22 or newer). It drives Playwright’s cached headless Chromium shell over the DevTools protocol (`tools/cdp.mjs`); nothing is installed and no window is shown. `?still` on the page stops the animation, `?og` draws the share card, `?icon` the icon.
