@@ -4,7 +4,7 @@
 
 - Page: https://clinamenco.com/products/canopy/
 - Book a free Quick Check: https://calendly.com/clinamenco
-- Email: clinamenco@protonmail.com
+- Email: hello@clinamenco.com
 - Updated: 2026-11-10
 
 In development · farmers markets first
@@ -15,7 +15,7 @@ One checkout for every way a customer pays.
 
 For market stalls and food trucks. Card taps, Apple Pay and Google Pay, Cash App, Venmo, Zelle, SNAP and market tokens, and cash, all on one screen on your phone. At closing, the whole day adds up in one ledger.
 
-[Try it early](mailto:clinamenco@protonmail.com?subject=Trying%20Canopy%20early)
+[Try it early](mailto:hello@clinamenco.com?subject=Trying%20Canopy%20early)
 
 [See how it works](https://clinamenco.com/products/canopy/#how)
 
@@ -89,7 +89,7 @@ Canopy’s own Tap to Pay on iPhone, card readers over Bluetooth, digital market
 
 Markets and vendors who want to try it early, write to us. We reply within one business day.
 
-[Write to us about Canopy](mailto:clinamenco@protonmail.com?subject=Trying%20Canopy%20early)
+[Write to us about Canopy](mailto:hello@clinamenco.com?subject=Trying%20Canopy%20early)
 
 [or book a free Quick Check](https://calendly.com/clinamenco)
 
@@ -97,7 +97,7 @@ Markets and vendors who want to try it early, write to us. We reply within one b
 
 Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
 
-Clinamen · United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+Clinamen · United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
 For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/canopy/index.html.md). Updated 10 November 2026.
 

@@ -4,7 +4,7 @@
 
 - Website: https://clinamenco.com/
 - Book a free Quick Check: https://calendly.com/clinamenco
-- Email: clinamenco@protonmail.com
+- Email: hello@clinamenco.com
 - Updated: 2026-11-10
 
 ## Tiny swerves, huge impact: AI for your business, one chore at a time.
@@ -80,7 +80,7 @@ We make demos on spec, without the business taking part, to show what we would b
 
 ### Software: Software for the way you take money
 
-**Canopy** is our checkout for market stalls and food trucks, in development: one screen on the vendor’s phone for every way a customer pays (card tap, phone wallets, Cash App, Venmo, PayPal, Zelle, SNAP and market tokens, and cash). Card and wallet payments land in the vendor’s own Square account, and Canopy never holds the money. Zelle, Venmo, tokens and cash go in the same ledger, so the day adds up in one place, and there is nothing for the customer to install. We are starting with farmers markets: markets and vendors who want to try it early, [write to us](mailto:clinamenco@protonmail.com). [See how Canopy works](https://clinamenco.com/products/canopy/).
+**Canopy** is our checkout for market stalls and food trucks, in development: one screen on the vendor’s phone for every way a customer pays (card tap, phone wallets, Cash App, Venmo, PayPal, Zelle, SNAP and market tokens, and cash). Card and wallet payments land in the vendor’s own Square account, and Canopy never holds the money. Zelle, Venmo, tokens and cash go in the same ledger, so the day adds up in one place, and there is nothing for the customer to install. We are starting with farmers markets: markets and vendors who want to try it early, [write to us](mailto:hello@clinamenco.com). [See how Canopy works](https://clinamenco.com/products/canopy/).
 
 **Custom software.** When a chore needs more than an automation, we build the tool: a small server, a web app your team installs on their phones, an iPhone app. Payments go through your own Square or Stripe account, so you keep your money and your processor.
 
@@ -220,7 +220,7 @@ Data privacy is the first worry most owners raise. Here is what we do.
 
 **Regulated data.** Health records, privileged legal files and financial advice carry their own rules. We scope the safeguards in writing before any work starts.
 
-Questions: [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com)
+Questions: [hello@clinamenco.com](mailto:hello@clinamenco.com)
 
 ## Questions: What owners ask before they book
 
@@ -290,15 +290,15 @@ Thirty minutes, no obligation, and a written answer within one business day.
 
 [Book a free Quick Check](https://calendly.com/clinamenco)
 
-[or write to clinamenco@protonmail.com](mailto:clinamenco@protonmail.com)
+[or write to hello@clinamenco.com](mailto:hello@clinamenco.com)
 
 ---
 
-Clinamen · Marietta, Georgia, working with small businesses across the United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+Clinamen · Marietta, Georgia, working with small businesses across the United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
 Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
 
-The figures and pictures on this page, except the founder’s photo and the pictures of the sites under Websites, are © 2026 Clinamen: to use one, [write to us](mailto:clinamenco@protonmail.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
+The figures and pictures on this page, except the founder’s photo and the pictures of the sites under Websites, are © 2026 Clinamen: to use one, [write to us](mailto:hello@clinamenco.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
 
 For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 10 November 2026.
 

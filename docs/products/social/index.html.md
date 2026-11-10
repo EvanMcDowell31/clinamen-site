@@ -4,7 +4,7 @@
 
 - Page: https://clinamenco.com/products/social/
 - Book a free Quick Check: https://calendly.com/clinamenco
-- Email: clinamenco@protonmail.com
+- Email: hello@clinamenco.com
 - Updated: 2026-11-10
 
 In early development
@@ -13,7 +13,7 @@ In early development
 
 We’re building a tool that plans, drafts and posts to every channel you use, from one place. Its AI will suggest, and you decide: nothing is published, changed or deleted without your approval.
 
-[Hear when it’s ready](mailto:clinamenco@protonmail.com?subject=The%20social%20media%20tool)
+[Hear when it’s ready](mailto:hello@clinamenco.com?subject=The%20social%20media%20tool)
 
 [See how it works](https://clinamenco.com/products/social/#how)
 
@@ -47,7 +47,7 @@ AI drafts from your own material, a weekly report on what worked, and more netwo
 
 ### Want in early?
 
-Tell us what you post, where and how often. [Write to us](mailto:clinamenco@protonmail.com?subject=The%20social%20media%20tool), and we’ll tell you when it’s ready.
+Tell us what you post, where and how often. [Write to us](mailto:hello@clinamenco.com?subject=The%20social%20media%20tool), and we’ll tell you when it’s ready.
 
 ## More from CLI ’n’ Amen co.
 
@@ -58,7 +58,7 @@ Tell us what you post, where and how often. [Write to us](mailto:clinamenco@prot
 
 Write to us with what you post and where. We reply within one business day.
 
-[Write to us](mailto:clinamenco@protonmail.com?subject=The%20social%20media%20tool)
+[Write to us](mailto:hello@clinamenco.com?subject=The%20social%20media%20tool)
 
 [or book a free Quick Check](https://calendly.com/clinamenco)
 
@@ -66,7 +66,7 @@ Write to us with what you post and where. We reply within one business day.
 
 Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
 
-Clinamen · United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+Clinamen · United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
 For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/social/index.html.md). Updated 10 November 2026.
 

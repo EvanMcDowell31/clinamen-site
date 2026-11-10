@@ -4,7 +4,7 @@
 
 - Page: https://clinamenco.com/products/irie/
 - Book a free Quick Check: https://calendly.com/clinamenco
-- Email: clinamenco@protonmail.com
+- Email: hello@clinamenco.com
 - Updated: 2026-11-10
 
 Open source · free · version 1.0
@@ -90,7 +90,7 @@ Irie is free. Install it in one line, or read what it is, part by part, first.
 
 Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
 
-Clinamen · United States · [clinamenco@protonmail.com](mailto:clinamenco@protonmail.com) · [Book a Quick Check](https://calendly.com/clinamenco)
+Clinamen · United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
 For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/irie/index.html.md). Updated 10 November 2026.
 
