@@ -1,6 +1,6 @@
 # CLI ’n’ Amen co.
 
-The website of Clinamen, an AI consulting firm for owner-run small businesses, marketed as **CLI ’n’ Amen co.** One static page, no build step.
+The website of Clinamen, marketed as **CLI ’n’ Amen co.**: automations, websites and software for owner-run small businesses across the United States. One static page, no build step.
 
 - Address: https://clinamenco.com (once the DNS below points here)
 - Preview: https://evanmcdowell31.github.io/clinamen-site/
@@ -10,29 +10,29 @@ The website of Clinamen, an AI consulting firm for owner-run small businesses, m
 | --- | --- |
 | ![Phone, first view](review/home-phone.png) | ![Desktop, first view](review/home-desktop.png) |
 
-More in `review/`: the offers on a phone, the name section, dark mode, and both full pages.
+More in `review/`: every section at phone and desktop width, dark mode, and both full pages.
 
 ## What’s on the page
 
-- **The swerve.** A terminal window in which atoms fall in straight lines until one leans a little near the top and sets off a cascade across the whole window: a tiny swerve, a huge impact. Lucretius’ *clinamen*, and the CLI half of the name. The window’s prompt runs the old rule, `pick cheap fast good`, gets `choose two` struck out, and answers “all three. amen.” It stops under “reduce motion”.
-- **Pick three.** The old rule, cheap, fast or good, pick two, and why agents broke it: a three-way Venn diagram split by a lightning-bolt crack with the swerving atom at the centre, three cards (cheap, fast, good) with the claims the firm can keep, and a table of published prices against the firm’s. The stance: paid properly for the checking and the craft, and still a fraction of an agency’s price, because the agents do the first pass.
-- **Chores we take off your plate:** the six typical fixes.
-- **Four ways to work with us:** Quick Check (free), One Fix, Sprint and Care, with the founding prices, the money-back term and the founding-price limit, as the firm’s 90-day marketing plan proposes them.
-- **How we work:** three steps, and the line that AI agents built on the open source [Irie](https://github.com/irie-people/irie) and Anthropic’s Claude do the first pass while a person checks every result.
-- **The founder:** who checks every job, with the proof: Irie, the agentic tooling and launches at a large retailer (not named on the page), the small-builder software at Ressio, and links to LinkedIn, GitHub, the personal site and Irie. A `whoami` terminal card beside it.
-- **Who we work with**, and what the firm doesn’t take yet.
-- **The name:** a dictionary entry for *clinamen*, how to say it, and Fig. 1: a textbook figure of the small lean and the different landing.
-- **Motifs**, drawn as SVG in the page: the terminal with the cascade, the cracked Venn, a “money back” rubber stamp on the refund term, Fig. 1, and the line icons on the chores.
-- **How we handle your data:** the practices that are settled; see the checklist for the three to confirm.
-- **Book a free Quick Check**, to the Calendly page, and the firm’s email.
+1. **The hero.** “AI for your business, one chore at a time.” Beside it, a window in which atoms fall in straight lines until one leans a little near the top and sets off a cascade across the whole window: a tiny swerve, a huge impact (Lucretius’ *clinamen*). Its caption: cheap · fast · good, ~~pick two~~, all three. The motion stops under “reduce motion”.
+2. **The old rule.** Cheap, fast and good, pick two, and why agents broke it: a three-way Venn diagram split by a lightning-bolt crack with the swerving atom at the centre, three cards with the claims the firm can keep, and a table of published prices against the firm’s (an agency’s pilot, website builders, a first project, retainers, consultants’ hourly rates).
+3. **What we do.** Three service lines, each with its price: Automations (the six typical fixes), Websites (one page on the client’s own domain, no monthly fee, with this site and briandominguezvoice.com as proof) and Software (Canopy, the checkout for market stalls and food trucks that is in development, and custom builds that pay into the client’s own Square or Stripe account).
+4. **The math on one chore.** Three hours a week is 150 hours a year, $6,000 at $40 an hour, and a small calculator for the visitor’s own numbers (50 working weeks; payback in weeks at both prices).
+5. **Pricing.** Quick Check (free), One Fix or one website, Sprint and Care, with the founding prices, the money-back term (a rubber stamp), the founding-price limit and the referral credit, as the firm’s 90-day marketing plan proposes them.
+6. **How it works.** Three steps; the founder checks everything.
+7. **The founder.** The photo, an at-a-glance card, and the proof: Irie, the agentic tooling and launches at a large retailer (not named on the page), the small-builder software at Ressio, and links to LinkedIn, GitHub, the personal site and Irie.
+8. **Who it’s for**, including markets and food trucks, the free nonprofit fixes, and regulated data scoped in writing.
+9. **Why Clinamen:** a dictionary entry, Fig. 1 (the small lean and the different landing), and how to say the name.
+10. **Your data**, and the closing booking band.
 
-The look: Fraunces for headings and the definition, JetBrains Mono for the CLI half of the wordmark, prices and labels, the system sans for text. Teal for actions, amber for the swerving atom. Light and dark follow the visitor’s setting. Both fonts are served from `docs/fonts/` under the SIL Open Font License, with the license files alongside, so the page loads nothing from other servers.
+The look: Fraunces for headings, JetBrains Mono for the CLI half of the wordmark, labels and prices, the system sans for text. Teal for actions, amber for the swerving atom. Light and dark follow the visitor’s setting. Both fonts are served from `docs/fonts/` under the SIL Open Font License, with the license files alongside, so the page loads nothing from other servers.
 
 ## Editing it
 
-- **Prices and terms:** the `offers` section of `docs/index.html`, one `.price` block per offer, plus the two notes (money back, founding prices) and the JSON-LD block in `<head>`.
+- **Prices and terms:** the `pricing` section of `docs/index.html` (one `.price` block per offer, the three notes), the `.line-price` lines under “What we do”, the comparison table under “The old rule”, the calculator’s two prices in `docs/site.js`, and the JSON-LD block in `<head>`.
 - **Email and booking link:** search `docs/index.html` for `protonmail` and `calendly`.
-- **Screenshots, the share card (`docs/og.png`) and the app icon:** `node tools/shoot.mjs` (Node 22 or newer). It drives Playwright’s cached headless Chromium shell over the DevTools protocol; nothing is installed and no window opens. `?still` on the page stops the animation, `?og` draws the share card, `?icon` the icon.
+- **The photo:** `docs/evan.jpg`, a 520-pixel square JPEG.
+- **Screenshots, the share card (`docs/og.png`), the icon and the “this site on a phone” proof (`docs/proof-phone.png`, copied from `review/home-phone.png`):** `node tools/shoot.mjs` (Node 22 or newer). It drives Playwright’s cached headless Chromium shell over the DevTools protocol; nothing is installed and no window is shown. `?still` on the page stops the animation, `?og` draws the share card, `?icon` the icon.
 
 ## Go-live checklist
 
@@ -51,11 +51,13 @@ The look: Fraunces for headings and the definition, JetBrains Mono for the CLI h
    | CNAME | www | evanmcdowell31.github.io |
 
 2. **The custom domain on GitHub Pages.** Add `docs/CNAME` holding `clinamenco.com`, set the domain in the repository’s Pages settings, wait for the certificate, then turn on “Enforce HTTPS”. `www.clinamenco.com` then redirects to the apex.
-3. **Prices.** The page shows the plan’s proposed prices and the founding-price limit (31 January 2027 or the first 10 paying clients). Confirm them before marketing starts, or change them as above.
+3. **Prices.** The page shows the plan’s proposed prices and the founding-price limit (31 January 2027 or the first 10 paying clients). Note that Sprint ($1,450; $990 founding) costs more than three One Fixes ($1,170; $585 founding); the page explains the extras (documentation, training, before-and-after timing). Confirm or change before marketing starts.
 4. **Data page.** Three practices are not yet specific on purpose: where job files are stored, what the AI provider keeps, and how many days after handover copies are deleted. Add them once settled.
-5. **A postal address** is needed for marketing email (CAN-SPAM), not for the page.
-6. **Email at the domain**, such as hello@clinamenco.com, if wanted: Proton Mail’s custom-domain feature, or Porkbun’s free email forwarding.
-7. **A Google Business Profile**, if the founders meet clients in person.
+5. **Canopy.** The page says it is in development and invites markets and vendors to write in. Update the line when a pilot runs.
+6. **A postal address** is needed for marketing email (CAN-SPAM), not for the page.
+7. **A phone number**, if you want calls: many owners call before they book. It goes in the footer and the closing band.
+8. **Email at the domain**, such as hello@clinamenco.com, if wanted: Proton Mail’s custom-domain feature, or Porkbun’s free email forwarding.
+9. **A Google Business Profile**, if clients are met in person.
 
 ## Sources
 
@@ -64,5 +66,5 @@ The look: Fraunces for headings and the definition, JetBrains Mono for the CLI h
 - GitHub Docs, “Managing a custom domain for your GitHub Pages site”: the A, AAAA and CNAME records above: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 - Fraunces, by Undercase Type, and JetBrains Mono, by JetBrains, both under the SIL Open Font License 1.1 (`docs/fonts/*/OFL.txt`), fetched from Google Fonts.
 - The offers, prices and wording follow the firm’s 90-day marketing plan (private).
-- The founder’s facts come from his public site, https://evanmcdowell31.github.io/, and his résumé; Irie’s release from https://github.com/irie-people/irie/releases.
-- The published prices in “What this costs elsewhere”, as the plan found them on 9 November 2026: an AI automation agency’s pilot and plans, https://samautomates.vercel.app/pricing; US AI consultants’ hourly rates and advisory retainers, https://www.leanware.co/insights/how-much-does-an-ai-consultant-cost; a first AI project for a firm under 10 people, https://www.lilachbullock.com/ai-consultant-cost-small-business/. Check them again before quoting them anywhere else.
+- The published prices in “What this costs elsewhere”, as the plan found them on 9 November 2026: an AI automation agency’s pilot and plans, https://samautomates.vercel.app/pricing; US AI consultants’ hourly rates and advisory retainers, https://www.leanware.co/insights/how-much-does-an-ai-consultant-cost; a first AI project for a firm under 10 people, https://www.lilachbullock.com/ai-consultant-cost-small-business/. Website builders: Squarespace’s plans, $19 to $99 a month billed annually, read on 10 November 2026 at https://www.squarespace.com/pricing. Check them again before quoting them anywhere else.
+- The founder’s facts come from his public site, https://evanmcdowell31.github.io/, and his résumé; Irie’s release from https://github.com/irie-people/irie/releases. Canopy’s description is from its own README (private repository, in development).
