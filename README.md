@@ -14,12 +14,15 @@ More in `review/`: the offers on a phone, the name section, dark mode, and both 
 
 ## What’s on the page
 
-- **The swerve.** A terminal window in which atoms fall in straight lines until one swerves and knocks the others loose: Lucretius’ *clinamen*, and the CLI half of the name. It stops under “reduce motion”.
+- **The swerve.** A terminal window in which atoms fall in straight lines until one leans a little near the top and sets off a cascade across the whole window: a tiny swerve, a huge impact. Lucretius’ *clinamen*, and the CLI half of the name. The window’s prompt runs the old rule, `pick cheap fast good`, gets `choose two` struck out, and answers “all three. amen.” It stops under “reduce motion”.
+- **Pick three.** The old rule, cheap, fast or good, pick two, and why agents broke it: a three-way Venn diagram split by a lightning-bolt crack with the swerving atom at the centre, three cards (cheap, fast, good) with the claims the firm can keep, and a table of published prices against the firm’s. The stance: paid properly for the checking and the craft, and still a fraction of an agency’s price, because the agents do the first pass.
 - **Chores we take off your plate:** the six typical fixes.
 - **Four ways to work with us:** Quick Check (free), One Fix, Sprint and Care, with the founding prices, the money-back term and the founding-price limit, as the firm’s 90-day marketing plan proposes them.
 - **How we work:** three steps, and the line that AI agents built on the open source [Irie](https://github.com/irie-people/irie) and Anthropic’s Claude do the first pass while a person checks every result.
+- **The founder:** who checks every job, with the proof: Irie, the agentic tooling and launches at a large retailer (not named on the page), the small-builder software at Ressio, and links to LinkedIn, GitHub, the personal site and Irie. A `whoami` terminal card beside it.
 - **Who we work with**, and what the firm doesn’t take yet.
-- **The name:** a dictionary entry for *clinamen*, and how to say it.
+- **The name:** a dictionary entry for *clinamen*, how to say it, and Fig. 1: a textbook figure of the small lean and the different landing.
+- **Motifs**, drawn as SVG in the page: the terminal with the cascade, the cracked Venn, a “money back” rubber stamp on the refund term, Fig. 1, and the line icons on the chores.
 - **How we handle your data:** the practices that are settled; see the checklist for the three to confirm.
 - **Book a free Quick Check**, to the Calendly page, and the firm’s email.
 
@@ -61,3 +64,5 @@ The look: Fraunces for headings and the definition, JetBrains Mono for the CLI h
 - GitHub Docs, “Managing a custom domain for your GitHub Pages site”: the A, AAAA and CNAME records above: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 - Fraunces, by Undercase Type, and JetBrains Mono, by JetBrains, both under the SIL Open Font License 1.1 (`docs/fonts/*/OFL.txt`), fetched from Google Fonts.
 - The offers, prices and wording follow the firm’s 90-day marketing plan (private).
+- The founder’s facts come from his public site, https://evanmcdowell31.github.io/, and his résumé; Irie’s release from https://github.com/irie-people/irie/releases.
+- The published prices in “What this costs elsewhere”, as the plan found them on 9 November 2026: an AI automation agency’s pilot and plans, https://samautomates.vercel.app/pricing; US AI consultants’ hourly rates and advisory retainers, https://www.leanware.co/insights/how-much-does-an-ai-consultant-cost; a first AI project for a firm under 10 people, https://www.lilachbullock.com/ai-consultant-cost-small-business/. Check them again before quoting them anywhere else.
