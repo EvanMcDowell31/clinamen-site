@@ -43,7 +43,7 @@
       <a href="#owner">The founder</a>
       <a href="#data">Your data</a>
     </nav>
-    <a class="btn small" href="https://calendly.com/clinamenco"><span class="long">Book a free Quick Check</span><span class="short">Book</span></a>
+    <a class="btn small" href="https://calendly.com/clinamenco"><span>Book<span class="long"> a free Quick Check</span></span></a>
   </div>
 </header>
 
@@ -62,10 +62,10 @@
       <p class="fine">AI agents do the first pass. The founder checks every result before you see it.</p>
     </div>
 
-    <figure class="swerve" aria-hidden="true">
+    <div class="swerve">
       <div class="term">
-        <div class="term-bar"><span></span><span></span><span></span><em>clinamen</em></div>
-        <svg class="atoms" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <div class="term-bar"><span></span><span></span><span></span><em aria-hidden="true">clinamen</em><button class="term-pause" type="button" hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path class="i-pause" d="M2.5 1.5h2.5v9H2.5zM7 1.5h2.5v9H7z"/><path class="i-play" d="M3 1.5v9l7.5-4.5z"/></svg><span class="tp-word">pause</span><span class="sr-only"> the animation</span></button></div>
+        <svg class="atoms" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
             <pattern id="col" x="0" y="0" width="400" height="40" patternUnits="userSpaceOnUse">
               <circle cx="50" cy="20" r="3.2"/><circle cx="100" cy="20" r="3.2"/><circle cx="150" cy="20" r="3.2"/>
@@ -104,13 +104,13 @@
             <circle class="g2" cx="250" cy="230" r="2.4" style="--dx:-150px;--dy:100px"/>
           </g>
         </svg>
-        <div class="term-lines">
+        <div class="term-lines" aria-hidden="true">
           <p class="term-dim">cheap · fast · good</p>
           <p class="term-err">pick two</p>
           <p class="term-out">all three.</p>
         </div>
       </div>
-    </figure>
+    </div>
   </div>
 </section>
 
@@ -134,10 +134,10 @@
           <text class="vl" x="150" y="302" text-anchor="middle">good</text>
           <circle class="vdot" cx="200" cy="170" r="7.5"/>
         </svg>
-        <figcaption><s>pick two</s> pick three</figcaption>
+        <figcaption><s><span class="sr-only">Not </span>pick two</s><span class="sr-only">, but</span> pick three</figcaption>
       </figure>
     </div>
-    <ul class="cards three-cards">
+    <ul class="cards three-cards" role="list">
       <li>
         <p class="lbl">Cheap</p>
         <h3>A fraction of an agency’s price</h3>
@@ -155,34 +155,34 @@
       </li>
     </ul>
     <div class="compare" id="compare">
-      <h3>What this costs elsewhere</h3>
-      <table>
+      <h3 id="compare-title">What this costs elsewhere</h3>
+      <table aria-labelledby="compare-title">
         <thead>
-          <tr><th>The job</th><th>Published prices, November 2026</th><th>CLI ’n’ Amen co.</th></tr>
+          <tr><th scope="col">The job</th><th scope="col">Published prices, November 2026</th><th scope="col">CLI ’n’ Amen co.</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td data-label="The job">One automation, set up and running</td>
+            <th scope="row">One automation, set up and running</th>
             <td data-label="Published prices">An AI agency’s pilot: $1,500 setup, then $2,000 a month</td>
             <td data-label="With us">One Fix: $195 founding ($390), with 30 days of fixes</td>
           </tr>
           <tr>
-            <td data-label="The job">A small-business website</td>
+            <th scope="row">A small-business website</th>
             <td data-label="Published prices">Website builders: $19 to $99 a month, every month, and you build it yourself</td>
             <td data-label="With us">One page, built for you: $195 founding ($390), no monthly fee, and you own it</td>
           </tr>
           <tr>
-            <td data-label="The job">A first AI project for a firm under 10 people</td>
+            <th scope="row">A first AI project for a firm under 10 people</th>
             <td data-label="Published prices">$4,000 to $10,000</td>
             <td data-label="With us">Sprint: $990 founding ($1,450)</td>
           </tr>
           <tr>
-            <td data-label="The job">Keeping it running</td>
+            <th scope="row">Keeping it running</th>
             <td data-label="Published prices">Agency plans from $2,000 a month; advisory retainers $2,000 to $5,000 a month</td>
             <td data-label="With us">Care: $149 a month</td>
           </tr>
           <tr>
-            <td data-label="The job">An hour of a US AI consultant</td>
+            <th scope="row">An hour of a US AI consultant</th>
             <td data-label="Published prices">$150 to $350</td>
             <td data-label="With us">We don’t bill hours</td>
           </tr>
@@ -206,7 +206,7 @@
         <p>Owner-run businesses lose hours every week to the same few chores. We hand one of them to AI, in the tools you already use, and it is working within 5 business days of access.</p>
         <p class="line-price"><b>$195</b> founding price per fix <span>standard $390</span></p>
       </div>
-      <ul class="mini-cards">
+      <ul class="mini-cards" role="list">
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><h4>A text back to every missed call</h4><p>Callers you can’t pick up get a text back, so the lead doesn’t walk.</p></li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg><h4>Quote drafts from a web form</h4><p>A form on your site becomes a draft estimate for you to check and send.</p></li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 14h4l2 3h4l2-3h4"/></svg><h4>Inbox sorting with draft replies</h4><p>Mail sorted by what it needs, with a reply drafted for you to send or bin.</p></li>
@@ -264,7 +264,7 @@
     <form class="calc" id="calc">
       <label>Hours a week on the chore <input id="hours" type="number" inputmode="decimal" min="0.5" step="0.5" value="3"></label>
       <label>What your hour is worth, $ <input id="rate" type="number" inputmode="numeric" min="1" step="5" value="40"></label>
-      <p class="calc-out" id="math-out"><b>150 hours and $6,000 a year.</b> One Fix at $195 pays back in about 2 weeks; at $390, about 4.</p>
+      <p class="calc-out" id="math-out" role="status"><b>150 hours and $6,000 a year.</b> One Fix at $195 pays back in about 2 weeks; at $390, about 4.</p>
     </form>
   </div>
 </section>
@@ -274,7 +274,7 @@
     <p class="kicker">Pricing</p>
     <h2>Four ways to work with us</h2>
     <p class="intro">Every offer has a written scope and a fixed price. No hourly billing, no surprises.</p>
-    <ul class="cards offer-cards">
+    <ul class="cards offer-cards" role="list">
       <li>
         <h3>Quick Check</h3>
         <p class="price"><span class="num">Free</span></p>
@@ -284,17 +284,17 @@
       <li class="lead">
         <p class="tag">Start here</p>
         <h3>One Fix, or one website</h3>
-        <p class="price"><span class="num">$195</span> <span class="founding">founding price</span><span class="std">standard $390</span></p>
+        <p class="price"><span class="num">$195</span> <span class="founding">founding price</span> <span class="std">standard $390</span></p>
         <p>One automation or assistant, set up in the tools you already use, or a one-page website on your domain. Working within 5 business days of access. A 30-minute handover, a one-page “how it works”, and 30 days of fixes.</p>
       </li>
       <li>
         <h3>Sprint</h3>
-        <p class="price"><span class="num">$990</span> <span class="founding">founding price</span><span class="std">standard $1,450</span></p>
+        <p class="price"><span class="num">$990</span> <span class="founding">founding price</span> <span class="std">standard $1,450</span></p>
         <p>Up to 3 fixes in 2 weeks, or a small software build. Documented, with your team shown how to use it, and each chore timed before and after so you see the hours saved. Includes your first month of Care, worth $149.</p>
       </li>
       <li>
         <h3>Care</h3>
-        <p class="price"><span class="num">$149</span> <span class="per">a month</span><span class="std">Plus $390 a month</span></p>
+        <p class="price"><span class="num">$149</span> <span class="per">a month</span> <span class="std">Plus $390 a month</span></p>
         <p>We keep every fix and page working as your apps change, and send a monthly note of the hours saved. Plus adds one new small fix and a 30-minute check-in each month. First month free with any Sprint.</p>
       </li>
     </ul>
@@ -327,19 +327,19 @@
   <div class="wrap">
     <p class="kicker">How it works</p>
     <h2>Three steps, one person accountable</h2>
-    <ol class="steps">
+    <ol class="steps" role="list">
       <li>
-        <code>01</code>
+        <code aria-hidden="true">01</code>
         <h3>You book a Quick Check</h3>
         <p>30 minutes on your weekly chores. Within one business day, a one-page written list: 3 chores, each with a fixed price.</p>
       </li>
       <li>
-        <code>02</code>
+        <code aria-hidden="true">02</code>
         <h3>We build it</h3>
         <p>In the tools you already use, working within 5 business days of access, with a handover and a one-page “how it works”.</p>
       </li>
       <li>
-        <code>03</code>
+        <code aria-hidden="true">03</code>
         <h3>The founder checks everything</h3>
         <p>AI agents, run by <a href="https://github.com/irie-people/irie">Irie</a>, the founder’s own open-source platform, on Anthropic’s Claude, do the first pass. He checks every result before it reaches you. Then 30 days of fixes.</p>
       </li>
@@ -367,7 +367,7 @@
     </figure>
     <div class="owner-body">
       <p class="intro">Evan McDowell runs CLI ’n’ Amen co. and is on every job himself: a staff software engineer who has shipped web and mobile products since 2017, and who now directs AI coding agents every day, checks what they produce, and compares models on real tasks.</p>
-      <ul class="proof-list">
+      <ul class="proof-list" role="list">
         <li><b>He built the platform the agents run on.</b> Creator of <a href="https://github.com/irie-people/irie">Irie</a>, an open-source (Apache-2.0) app that runs coding agents from any supplier side by side, routes each task to the cheapest model that is accurate enough for it, and keeps every session’s context in git. One Go program plus native Mac and iPhone apps; version 1.0 released on 9 November 2026.</li>
         <li><b>He has done this at scale.</b> As a staff engineer at one of the world’s largest retailers: an early engineer on a nutrition hub that grew from beta to 100,000 users, scoped and built an AI feature in its shopping assistant, designed the team’s agentic tooling (170+ reusable agent skills used by a 12-person team, with about 40% of weekly token throughput on lower-cost sub-agents), and founded its end-to-end test practice, 263 Playwright tests run every weekday.</li>
         <li><b>He knows small businesses from the inside.</b> Founding engineer at Ressio Software, construction management for small home builders: first commit through launch, to $150,000 in recurring revenue in its first year.</li>
@@ -391,7 +391,7 @@
       <h2>Owner-run businesses of 2 to 20 people</h2>
       <p class="intro">Where the owner still does the admin, and can name a chore that eats 3 hours a week or more.</p>
     </div>
-    <ul class="who-list">
+    <ul class="who-list" role="list">
       <li><b>Trades and home services</b> <span>HVAC, plumbing, electrical, cleaning, landscaping</span></li>
       <li><b>Real estate and insurance agents</b> <span>lead follow-up, write-ups, the inbox</span></li>
       <li><b>Small agencies and studios</b> <span>proposals, reports, client updates</span></li>
@@ -432,10 +432,10 @@
         </svg>
         <figcaption>Fig. 1 · a small lean, a different landing</figcaption>
       </figure>
-      <p class="headword"><span class="hw">clinamen</span> <span class="ipa">/klaɪˈneɪmən/</span> <span class="pos">noun</span> <span class="pl">plural clinamina</span></p>
-      <p class="etym">Latin, from <i>clinare</i>, to lean.</p>
+      <p class="headword"><span class="hw">clinamen</span> <span class="ipa"><span aria-hidden="true">/klaɪˈneɪmən/</span><span class="sr-only">pronounced kly-nay-men</span></span> <span class="pos">noun</span> <span class="pl">plural <span lang="la">clinamina</span></span></p>
+      <p class="etym">Latin, from <i lang="la">clinare</i>, to lean.</p>
       <ol class="senses">
-        <li><b>The swerve.</b> In Lucretius’ <i>De rerum natura</i>, written around 55 BC, atoms fall straight down through the void until one, at no fixed time or place, leans a little from its path. Without that swerve nothing would ever meet, and nature would never have made a thing.</li>
+        <li><b>The swerve.</b> In Lucretius’ <i lang="la">De rerum natura</i>, written around 55 BC, atoms fall straight down through the void until one, at no fixed time or place, leans a little from its path. Without that swerve nothing would ever meet, and nature would never have made a thing.</li>
         <li><b>Us.</b> A tiny swerve, a huge impact: one chore handed off, and the whole week lands somewhere new. Small swerves for small businesses.</li>
       </ol>
       <p class="sayit"><span class="label">Say it</span> <span class="brand-inline"><span class="b-cli">CLI</span><span class="b-n">’n’</span><span class="b-amen">Amen</span></span> <span class="gloss">CLI is the command line, where our agents do their work. Amen: so be it.</span></p>
