@@ -430,7 +430,7 @@ body.og, body.icon { background: var(--term); }
 }
 @media (max-width: 760px) {
   .nav { display: none; }
-  .bar { gap: 12px; min-height: 58px; }
+  .bar { gap: 12px; min-height: 58px; flex-wrap: wrap; }
   .btn.small { margin-left: auto; }
   .theme-toggle { margin-left: auto; }
   .theme-toggle:not([hidden]) + .btn.small { margin-left: 0; }
@@ -457,6 +457,7 @@ body.og, body.icon { background: var(--term); }
   .glance dd { margin-bottom: 8px; }
 }
 @media (max-width: 400px) {
+  .theme-toggle { width: 36px; height: 36px; }
   .brand { font-size: 19px; }
   .price .num { font-size: 30px; }
 }
