@@ -139,7 +139,7 @@ Founding prices hold until Sunday 31 January 2027 or our first 10 paying clients
 
 ### Refer a business
 
-The business you refer gets $100 off its first job, so a founding fix costs it $95. You get 10% of everything it pays us in its first year, paid as we’re paid once its first 30 days are up. It must be new to us, and not your own. Never tied to a review. If you post about it, say you get 10%.
+The business you refer gets 10% off its first job. You get 10% of everything it pays us in its first year, paid as we’re paid once its first 30 days are up. It must be new to us, and not your own. Never tied to a review. If you post about it, say you get 10%.
 
 ## How it works: Three steps, one person accountable
 
