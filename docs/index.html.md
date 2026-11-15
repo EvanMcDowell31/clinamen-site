@@ -5,7 +5,7 @@
 - Website: https://clinamenco.com/
 - Book a free Quick Check: https://calendly.com/clinamenco
 - Email: hello@clinamenco.com
-- Updated: 2026-11-10
+- Updated: 2026-11-15
 
 ## Tiny swerves, huge impact: AI for your business, one chore at a time.
 
@@ -139,7 +139,7 @@ Founding prices hold until Sunday 31 January 2027 or our first 10 paying clients
 
 ### Refer a business
 
-$100 off for both of you once a business you refer pays for its first job. Never tied to a review.
+The business you refer gets $100 off its first job, so a founding fix costs it $95. You get 10% of everything it pays us in its first year, paid as we’re paid once its first 30 days are up. It must be new to us, and not your own. Never tied to a review. If you post about it, say you get 10%.
 
 ## How it works: Three steps, one person accountable
 
@@ -300,6 +300,6 @@ Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clin
 
 The figures and pictures on this page, except the founder’s photo and the pictures of the sites under Websites, are © 2026 Clinamen: to use one, [write to us](mailto:hello@clinamenco.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
 
-For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 10 November 2026.
+For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 15 November 2026.
 
 Built with [Irie](https://irie-people.github.io/irie/), the founder’s open-source agent platform. © 2026 Clinamen.
