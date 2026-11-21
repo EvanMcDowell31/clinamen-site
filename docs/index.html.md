@@ -5,7 +5,7 @@
 - Website: https://clinamenco.com/
 - Book a free Quick Check: https://calendly.com/clinamenco
 - Email: hello@clinamenco.com
-- Updated: 2026-11-15
+- Updated: 2026-11-21
 
 ## Tiny swerves, huge impact: AI for your business, one chore at a time.
 
@@ -151,11 +151,12 @@ The claims we make are the ones we can keep: a fixed price, a written scope, a d
 
 ## Products: We build our own software, too
 
-With the same agents and the same checks as your job. One is out and free; two are on the way.
+With the same agents and the same checks as your job. One is out and free; three are on the way.
 
 - **Irie.** Open source · version 1.0 The app our agents run in: every AI coding agent you have, side by side in one calm view. Free, for Mac and Linux. [More about Irie](https://clinamenco.com/products/irie/)
 - **Canopy.** In development One checkout on a vendor’s phone for every way a customer pays, and one ledger at closing. For market stalls and food trucks. [More about Canopy](https://clinamenco.com/products/canopy/)
 - **A social media tool.** In early development Plan, draft and post to every channel from one place, and nothing goes out until you say yes. [More about the social media tool](https://clinamenco.com/products/social/)
+- **Mycylic.** In development Graphs you make, walk through and see, with every version on a blockchain. First up: who holds a token, and where it moves. [More about Mycylic](https://clinamenco.com/products/mycylic/)
 
 ## The founder: The person checking your job is the founder.
 
@@ -296,10 +297,10 @@ Thirty minutes, no obligation, and a written answer within one business day.
 
 Clinamen · Marietta, Georgia, working with small businesses across the United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
-Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/)
+Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/) · [Mycylic](https://clinamenco.com/products/mycylic/)
 
 The figures and pictures on this page, except the founder’s photo and the pictures of the sites under Websites, are © 2026 Clinamen: to use one, [write to us](mailto:hello@clinamenco.com). Visits are counted with [GoatCounter](https://www.goatcounter.com/), without cookies or personal data.
 
-For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 15 November 2026.
+For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/index.html.md). Updated 21 November 2026.
 
 Built with [Irie](https://irie-people.github.io/irie/), the founder’s open-source agent platform. © 2026 Clinamen.

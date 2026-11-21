@@ -512,6 +512,13 @@ body.og, body.icon { background: var(--term); }
 .p-install pre { margin: 0; padding: 18px 20px 22px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14.5px; line-height: 1.6; }
 .p-install code { color: var(--term-ink); }
 .notes code, .intro code { font-size: .9em; }
+/* Mycylic: a terminal in the hero, a wide screenshot, and status pills in the notes */
+.p-term { width: 100%; }
+.p-term .term { text-align: left; }
+.p-big figcaption { max-width: 60em; margin-left: auto; margin-right: auto; }
+.notes .status { font-size: 12px; margin: 0 0 10px; }
+/* Four products on the home page sit two by two */
+.products .product-cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); }
 
 /* Sketches of product screens, drawn in the same dark glass as Canopy's charge screen */
 .phones { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 14px; }

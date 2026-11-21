@@ -20,7 +20,7 @@ More in `review/`: every section at phone and desktop width, dark mode, and both
 4. **The math on one chore.** Three hours a week is 150 hours a year, $6,000 at $40 an hour, and a small calculator for the visitor’s own numbers (50 working weeks; payback in weeks at both prices).
 5. **Pricing.** Quick Check (free), One Fix or one website, Sprint and Care, with the founding prices, the money-back term (a rubber stamp), the founding-price limit and the referral credit, as the firm’s 90-day marketing plan proposes them.
 6. **How it works.** Three steps; the founder checks everything.
-7. **Products.** Three cards, each opening its own page (below): Irie, Canopy and a social media tool.
+7. **Products.** Four cards, two by two, each opening its own page (below): Irie, Canopy, a social media tool and Mycylic.
 8. **The founder.** The photo, an at-a-glance card, and the proof: Irie, the agentic tooling and launches at a large retailer (not named on the page), the small-builder software at Ressio, and links to LinkedIn, GitHub, the personal site and Irie.
 9. **Who it’s for**, including markets and food trucks, the free nonprofit fixes, and regulated data scoped in writing.
 10. **Why Clinamen:** a dictionary entry, Fig. 1 (the small lean and the different landing), and how to say the name.
@@ -31,11 +31,12 @@ The look: Fraunces for headings, JetBrains Mono for the CLI half of the wordmark
 
 ## The product pages
 
-Each product has its own page in `docs/products/<name>/index.html`, served at `/products/<name>/`. They share the home page’s `style.css` and `site.js` (the light and dark switch), and copy its header and footer, so a change to the header or the footer is made in all four files. Each page has its own title, description, canonical address, Open Graph tags and JSON-LD, a footer date, and a Markdown twin written by `tools/agent.mjs`.
+Each product has its own page in `docs/products/<name>/index.html`, served at `/products/<name>/`. They share the home page’s `style.css` and `site.js` (the light and dark switch), and copy its header and footer, so a change to the header or the footer is made in all five files. Each page has its own title, description, canonical address, Open Graph tags and JSON-LD, a footer date, and a Markdown twin written by `tools/agent.mjs`.
 
 - **Irie** (`products/irie/`): open source, version 1.0. What it is, who it’s for, how it works, why people use it, the one-line install, and how the firm uses it. The screenshot, `docs/img/irie-ai-coding-agents-mac-app.webp`, is Irie’s own `docs/media/irie-mac.png` (Apache-2.0, filmed with stand-in agents), credited in the footer. Its JSON-LD reuses the home page’s `#irie` node.
 - **Canopy** (`products/canopy/`): in development, farmers markets first: what works today in testing, what comes next, what is planned. Card and wallet payments land in the vendor’s own Square account, and Canopy never holds money. It names no price, which isn’t set. The phones are sketches, labelled so, with a made-up stall.
 - **A social media tool** (`products/social/`): in early development: what it does, how it works and where it stands.
+- **Mycylic** (`products/mycylic/`): in development, token graphs first: what it graphs, how it works, privacy, security, and what works today, what comes next and what is planned. Only this page and its home-page card say that every graph version lives on a blockchain (the owner, 21 November 2026); the rest of the home page stays plain, and no page offers a coin, NFTs, a DAO or a wallet to pay into. The terminal shows a real run, shortened. The screenshot, `docs/img/mycylic-graph-of-uni-token-holders-and-transfers.webp` with its `-dark` twin, is Mycylic’s own viewer on UNI’s public data from Blockscout, with an exchange address the explorer labels picked; personal names stay out of it. SHA-512 version names work today (Mycylic’s 6252313); encrypted vaults are planned, so move them to works today only once they land.
 
 ## Editing it
 
@@ -119,4 +120,4 @@ What the page does so that search engines and AI assistants find it, understand 
 - W3C, Web Content Accessibility Guidelines (WCAG) 2.2, the standard the page aims at: https://www.w3.org/TR/WCAG22/
 - axe-core 4.10.2 by Deque Systems, under the Mozilla Public License 2.0: https://github.com/dequelabs/axe-core. `tools/a11y.mjs` fetches it at run time; it is not kept in this repository.
 - Scott O’Hara, “‘Fixing’ Lists”, on why lists styled without bullets carry `role="list"`: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
-- The founder’s facts come from his public site, https://evanmcdowell31.github.io/, and his résumé; Irie’s release from https://github.com/irie-people/irie/releases. Canopy’s description is from its own README (private repository, in development).
+- The founder’s facts come from his public site, https://evanmcdowell31.github.io/, and his résumé; Irie’s release from https://github.com/irie-people/irie/releases. Canopy’s description is from its own README (private repository, in development). Mycylic’s is from its own CLAUDE.md and plan (in development, not yet published), and its screenshot’s data from Blockscout’s public API, https://eth.blockscout.com/. SHA-512 and AES-256 as the NSA’s CNSA 2.0 names them: https://en.wikipedia.org/wiki/Commercial_National_Security_Algorithm_Suite
