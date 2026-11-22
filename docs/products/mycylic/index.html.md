@@ -38,10 +38,11 @@ One page, served from your own computer. A holder’s dot grows with its share o
 
 ## What it graphs: Tokens first, then what connects
 
-The name comes from mycelium, the fungus network that connects things. Tokens come first; notes, an anatomy showcase and version control are planned.
+The name comes from mycelium, the fungus network that connects things. Tokens come first; notes, markets, an anatomy showcase and version control are planned.
 
 - **Tokens** · Today. Any ERC-20 token, the common kind, on Ethereum or Base: its largest holders, its latest transfers, and the exchanges and contracts in between.
 - **Notes** · Planned. An Obsidian vault as a graph of your notes. It stays private: only its hash goes on-chain.
+- **Markets** · Planned. Markets as a graph, built from public sources. It stays private: kept in an encrypted vault, with only a hash on-chain.
 - **Anatomy** · Planned. The graph of the human body from [What’s that muscle?](https://clinamenco.com/products/whats-that-muscle/), as Mycylic’s public showcase. It isn’t in Mycylic’s format yet.
 - **Version control** · Planned for later, most likely: every change kept as a version linked to the one before.
 
@@ -90,7 +91,7 @@ The first publish on Base Sepolia, then rebuilding it from the chain alone.
 
 ### Planned
 
-Base itself, the main network. Encrypted vaults for private graphs, shared between your devices under post-quantum locks. An Obsidian vault of notes as a graph, anchored by its hash only. Then version control.
+Base itself, the main network. Encrypted vaults for private graphs, shared between your devices under post-quantum locks. An Obsidian vault of notes as a graph, anchored by its hash only. Markets as a graph, private in the same way. Then version control.
 
 ## Questions: What people ask first
 
