@@ -35,6 +35,7 @@ Automations, websites and software for owner-run businesses across the United St
 ## Products
 
 - [Irie](https://clinamenco.com/products/irie/index.html.md): Irie is the free, open-source app our AI agents run in: coding agents from any supplier, on any model, side by side in one calm view, each in its own git worktree. Version 1.0 for Mac and Linux.
+- [What’s that muscle?](https://clinamenco.com/products/whats-that-muscle/index.html.md): What’s that muscle?, a live prototype: point at the body or type “lats” and it names the muscle, then walk anatomy as a graph and in 3D. Client handouts for physios and trainers. For learning, not diagnosis.
 - [Canopy](https://clinamenco.com/products/canopy/index.html.md): Canopy, in development, puts every way a customer pays on one screen on a market vendor’s or food truck’s phone: card taps, Apple Pay, Cash App, Venmo, Zelle, SNAP tokens and cash, with one ledger at closing. Cards land in your own Square account.
 - [Social media that waits for your yes](https://clinamenco.com/products/social/index.html.md): In early development at CLI ’n’ Amen co.: a social media tool that plans, drafts and posts to every channel you use from one place, and publishes nothing without your approval.
 - [Mycylic](https://clinamenco.com/products/mycylic/index.html.md): Mycylic, in development, graphs who holds a token on Ethereum or Base and where it moves, from public data, with every version on a blockchain. Local and anonymous by default.

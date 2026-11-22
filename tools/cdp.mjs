@@ -13,7 +13,7 @@ export const pageUrl = "file://" + join(root, "docs/index.html");
 // here: its file under docs/ and the path it is served at.
 export const pages = [
   { name: "home", file: "docs/index.html", path: "", url: pageUrl },
-  ...["irie", "canopy", "social", "mycylic"].map((slug) => ({
+  ...["irie", "whats-that-muscle", "canopy", "social", "mycylic"].map((slug) => ({
     name: slug, file: `docs/products/${slug}/index.html`, path: `products/${slug}/`,
     url: "file://" + join(root, "docs/products", slug, "index.html"),
   })),

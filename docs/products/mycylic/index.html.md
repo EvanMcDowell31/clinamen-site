@@ -5,7 +5,7 @@
 - Page: https://clinamenco.com/products/mycylic/
 - Book a free Quick Check: https://calendly.com/clinamenco
 - Email: hello@clinamenco.com
-- Updated: 2026-11-21
+- Updated: 2026-11-22
 
 In development · token graphs first
 
@@ -38,10 +38,11 @@ One page, served from your own computer. A holder’s dot grows with its share o
 
 ## What it graphs: Tokens first, then what connects
 
-The name comes from mycelium, the fungus network that connects things. Tokens come first; notes and version control are planned.
+The name comes from mycelium, the fungus network that connects things. Tokens come first; notes, an anatomy showcase and version control are planned.
 
 - **Tokens** · Today. Any ERC-20 token, the common kind, on Ethereum or Base: its largest holders, its latest transfers, and the exchanges and contracts in between.
 - **Notes** · Planned. An Obsidian vault as a graph of your notes. It stays private: only its hash goes on-chain.
+- **Anatomy** · Planned. The graph of the human body from [What’s that muscle?](https://clinamenco.com/products/whats-that-muscle/), as Mycylic’s public showcase. It isn’t in Mycylic’s format yet.
 - **Version control** · Planned for later, most likely: every change kept as a version linked to the one before.
 
 ## Privacy: Local and anonymous by default
@@ -121,10 +122,10 @@ Tell us which token you’d graph first. We reply within one business day.
 
 ---
 
-Products: [Irie](https://clinamenco.com/products/irie/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/) · [Mycylic](https://clinamenco.com/products/mycylic/)
+Products: [Irie](https://clinamenco.com/products/irie/) · [What’s that muscle?](https://clinamenco.com/products/whats-that-muscle/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/) · [Mycylic](https://clinamenco.com/products/mycylic/)
 
 Clinamen · United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 
-For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/mycylic/index.html.md). Updated 21 November 2026.
+For AI assistants: [llms.txt](https://clinamenco.com/llms.txt) and [this page as Markdown](https://clinamenco.com/products/mycylic/index.html.md). Updated 22 November 2026.
 
 The graph in the screenshot is public chain data, read through Blockscout’s API. © 2026 Clinamen.
