@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://clinamenco.com/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image><image:loc>https://clinamenco.com/img/ai-for-your-business-one-chore-at-a-time.png</image:loc></image:image>
     <image:image><image:loc>https://clinamenco.com/img/audiobook-narrator-website-brian-dominguez.webp</image:loc></image:image>
     <image:image><image:loc>https://clinamenco.com/img/cheap-fast-good-venn-diagram-pick-three.webp</image:loc></image:image>
@@ -24,6 +24,13 @@
     <image:image><image:loc>https://clinamenco.com/img/whats-that-muscle-3d-body-c5-spinal-root.webp</image:loc></image:image>
     <image:image><image:loc>https://clinamenco.com/img/whats-that-muscle-anatomy-graph-biceps-brachii.webp</image:loc></image:image>
     <image:image><image:loc>https://clinamenco.com/img/whats-that-muscle-client-handout-on-a-phone.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://clinamenco.com/products/charters/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <image:image><image:loc>https://clinamenco.com/img/charters-graph-38-texts-of-rights-on-a-timeline.webp</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/charters-graph-eighth-amendment-on-a-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://clinamenco.com/img/charters-graph-freedom-of-speech-across-13-texts.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://clinamenco.com/products/canopy/</loc>

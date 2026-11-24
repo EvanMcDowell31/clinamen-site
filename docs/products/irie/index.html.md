@@ -88,7 +88,7 @@ Irie is free. Install it in one line, or read what it is, part by part, first.
 
 ---
 
-Products: [Irie](https://clinamenco.com/products/irie/) · [What’s that muscle?](https://clinamenco.com/products/whats-that-muscle/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/) · [Mycylic](https://clinamenco.com/products/mycylic/)
+Products: [Irie](https://clinamenco.com/products/irie/) · [What’s that muscle?](https://clinamenco.com/products/whats-that-muscle/) · [the Charters Graph](https://clinamenco.com/products/charters/) · [Canopy](https://clinamenco.com/products/canopy/) · [a social media tool](https://clinamenco.com/products/social/) · [Mycylic](https://clinamenco.com/products/mycylic/)
 
 Clinamen · United States · [hello@clinamenco.com](mailto:hello@clinamenco.com) · [Book a Quick Check](https://calendly.com/clinamenco)
 

@@ -517,12 +517,10 @@ body.og, body.icon { background: var(--term); }
 .p-term .term { text-align: left; }
 .p-big figcaption { max-width: 60em; margin-left: auto; margin-right: auto; }
 .notes .status { font-size: 12px; margin: 0 0 10px; }
-/* Five products on the home page: the two out now over the three on the way; one column when narrow */
+/* Six products on the home page: the three out now over the three on the way; one column when narrow */
 .products .product-cards { grid-template-columns: 1fr; }
 @media (min-width: 880px) {
-  .products .product-cards { grid-template-columns: repeat(6, 1fr); }
-  .products .product-cards li { grid-column: span 2; }
-  .products .product-cards li:nth-child(-n+2) { grid-column: span 3; }
+  .products .product-cards { grid-template-columns: repeat(3, 1fr); }
 }
 /* What’s that muscle?: its phone screenshots, at a phone’s width */
 .p-phone { width: min(100%, 320px); }

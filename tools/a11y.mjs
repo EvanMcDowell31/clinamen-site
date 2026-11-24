@@ -5,7 +5,8 @@
 // in which every stop shows our focus ring clear of the sticky header, the hero's
 // pause button, reduced motion, and WCAG's text-spacing test.
 // Usage: node tools/a11y.mjs [--page NAME] [--json FILE]   prints what fails and exits 1 on
-// any failure. --page checks one page: home, irie, whats-that-muscle, canopy, social or mycylic.
+// any failure. --page checks one page: home, irie, whats-that-muscle, charters, canopy,
+// social or mycylic.
 // The first run fetches axe-core from jsDelivr into ~/Library/Caches/clinamen-site
 // and checks it against the hash below.
 import { createHash } from "node:crypto";
